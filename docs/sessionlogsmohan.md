@@ -1,5 +1,3 @@
-# 🚀 Project Progress Report
-
 ## 📅 28 April 2026
 ### 👨‍💻 Mohan Kumar
 - Created a GitHub account and repository.
