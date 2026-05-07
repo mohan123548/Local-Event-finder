@@ -1,45 +1,69 @@
-1. Search Events
+🔹Example with Michael ,Priya
+
+🔹Example 1 — Search Events
+
+User Story
+
 As a user, I want to search for events by keyword so that I can find events matching my interests.
-ex:music ,sports,technology
 
-2. Filter by Location
+Scenario
+* Michael searches for “football match” and finds sports events in Berlin.
+* Priya searches for “AI workshop” and finds technology events.
+
+Explanation
+Both users use the search feature to quickly find events related to their interests.
+
+⸻
+
+🔹Example 2 — Filter by Location
+
+User Story
 As a user, I want to filter events by city or distance so that I can discover events near me.
-ex: within the preffered distance
 
-4. View Event Details
-As a user, I want to view event details (date, time, venue, description) so that I can decide whether to attend.
-date,time,venue,tickete details,description
+Scenario
+* Michael filters events happening within 5 km of his location.
+* Priya filters events only in Munich.
 
-4. Save/Favorite Events
+Explanation
+
+The location filter helps users discover nearby events more easily.
+
+⸻
+
+🔹Example 3 — Save/Favorite Events
+
+User Story
 As a user, I want to save events to a favorites list so that I can easily access them later.
-Save favorites,bookmarks
 
-6. Get Event Notifications
+Scenario
+* Michael saves a football tournament to his favorites.
+* Priya saves a cybersecurity seminar.
+
+Later, both users can quickly access their saved events.
+
+⸻
+
+🔹Example 4 — Event Notifications
+
+User Story
 As a user, I want to receive notifications for upcoming events so that I don’t miss them.
 
-🔹 Example of an Epic 
+Scenario
+* Michael receives a reminder before the football match starts.
+* Priya receives a notification before her seminar begins.
 
-An epic is too large to complete in one sprint.
-As a user, I want to personalize my event recommendations so that I see events relevant to me.
+Explanation
+Notifications help users stay updated about upcoming events.
 
-Break it into smaller stories:
+⸻
 
-1. As a user, I want to select my interests (music, sports, tech) so that recommendations match my preferences.
-2. As a user, I want to see recommended events based on my interests so that I discover relevant events.
-3. As a user, I want to update my preferences so that recommendations stay accurate.
+🔹As a user, I want personalized event recommendations so that I can discover events relevant to my interests.
 
-🔹 Prioritization
+Scenario
 
- 🔹High Priority 
+* Michael selects interests such as sports and music. The app recommends football matches and concerts.
+* Priya selects technology and business. The app recommends AI workshops and startup events.
 
-1. Search events
-2. View event details
-3. Filter by location
+Explanation
 
-🔹Medium Priority
-
-1.Save/favorite events
-
-🔹Low Priority
-
-1.Notifications
+The application provides different recommendations based on each user’s interests and preferences.
