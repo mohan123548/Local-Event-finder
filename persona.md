@@ -118,3 +118,16 @@ Events:
       Local advertising events
       Networking 
       coding computations.
+
+
+
+persona by alisha : 
+1. Mark Williams – The Community Organizer Age: 45 Background: Runs a local non-profit organization and hosts charity events.
+
+2. Technical Skill Level: Moderate — familiar with basic digital tools but not advanced analytics.
+
+3.Why He Uses the System: To promote his events and reach more local attendees.
+
+4.Loves: Easy event creation and the ability to share across multiple platforms.
+
+5.Finds Confusing: Complicated advertisement or sponsorship management features.`
