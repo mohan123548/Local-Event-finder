@@ -119,7 +119,7 @@ Events:
       Networking 
       coding computations.
 
-
+![examples of persona example ](image scenario.jpeg" persona example")
 
 persona by alisha : 
 1. Mark Williams – The Community Organizer Age: 45 Background: Runs a local non-profit organization and hosts charity events.
