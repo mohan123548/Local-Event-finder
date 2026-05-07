@@ -1,11 +1,8 @@
 28 april 
 mohan 
-created git hub 
+created git hub and git repo 
 thursday 30 april 
-done with the branches 
-Thursday 30 April
-mohan
-Friday 01-05-2026
+done with the branches and added a project  and added members in the  project 
 git hub pull request 
 git hub repository  updated
 mohan kumar 
