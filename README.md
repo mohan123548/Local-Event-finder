@@ -10,7 +10,7 @@
 | Scrum Master |Shaik Ahmad Alisha |
 | Developer |Mothadi Venkat sai raghu |
 | Developer |Bonkuri Venkata Sambasiva rao |
-| Developer |Deeksith shankar|
+| Developer |Deeksith |
 
 
 ## Project Overview
