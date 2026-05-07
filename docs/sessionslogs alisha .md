@@ -1,17 +1,23 @@
-28th April 2026
-ahmad alisha
-I have created a github account
+.
 
-30th April 2026 Done with branches
+📘 Project Activity Log
+🗓️ 28th April 2026
+Ahmad Alisha — Created a new GitHub account.
 
-5Th May 2026 Shaik Ahmad alisha I have created a file named as personas in that i have written one persona for part 1
-discussed three parts with team members
+🗓️ 30th April 2026
+Completed work on branches and explored branching workflow.
 
-7th may 2026
-shaik ahmad alisha
-we have discussed about our idea with other groups.also collected feedbacks and inputs from other groups.they too explained about their projects
+🗓️ 5th May 2026
+Shaik Ahmad Alisha — Created a file named personas and wrote one persona for Part 1.
+Discussed all three parts with team members.
+
+🗓️ 7th May 2026
+Shaik Ahmad Alisha — Discussed our idea with other groups.
+Collected feedback and inputs from them, and listened to their project explanations as well.
+
+📝 Reflection
 1. Which concept was most useful, and why?
-The user stories concept was the most useful because it forced our team to translate abstract user needs into concrete, testable behaviors. By framing features through the lens of “who the user is, what they want, and why,” we were able to prioritize functionality that directly supported real workflows rather than assumptions.
+The user stories concept was the most useful because it helped our team convert abstract user needs into clear, testable actions. By focusing on who the user is, what they want, and why, we were able to design features that aligned with real user workflows instead of assumptions.
 
 2. What assumption about your users did this workshop challenge?
-This workshop challenged my assumption that users always approach a product with a clear goal in mind. Through personas and scenario-building, I realized many users operate with partial information or conflicting motivations, which means our design must support exploration, not just linear task completion.
+This workshop challenged my assumption that users always begin with a clear and defined goal. Through personas and scenario-building, I realized that many users operate with incomplete information or mixed motivations. This means our design must support exploration, not just straightforward task completion.
