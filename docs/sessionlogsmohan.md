@@ -1,14 +1,26 @@
-28 april 
-mohan 
-created git hub and git repo 
-thursday 30 april 
-done with the branches and added a project  and added members in the  project 
-git hub pull request 
-git hub repository  updated
-mohan kumar 
-05-05-2026
-Update the project name and  working on personas 
-working on scenarios 
-updated scenarios.md in git hub 
-gone through some pull request 
-discussed about the three parts with team members
+# 🚀 Project Progress Report
+
+## 📅 28 April 2026
+### 👨‍💻 Mohan Kumar
+- Created a GitHub account and repository.
+
+---
+
+## 📅 30 April 2026 (Thursday)
+### 👨‍💻 Mohan Kumar
+- Worked with GitHub branches.
+- Added the project to the repository.
+- Added team members to the project.
+- Learned and worked on GitHub pull requests.
+- Updated the GitHub repository.
+
+---
+
+## 📅 05 May 2026
+### 👨‍💻 Mohan Kumar
+- Updated the project name.
+- Worked on personas.
+- Worked on scenarios.
+- Updated the `scenarios.md` file in GitHub.
+- Reviewed pull requests.
+- Discussed the three project parts with team members.
