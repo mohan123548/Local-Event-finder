@@ -4,7 +4,7 @@ ex:music ,sports,technology
 
 2. Filter by Location
 As a user, I want to filter events by city or distance so that I can discover events near me.
-ex: within the preffered distnace 
+ex: within the preffered distance
 
 4. View Event Details
 As a user, I want to view event details (date, time, venue, description) so that I can decide whether to attend.
