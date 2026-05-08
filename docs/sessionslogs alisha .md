@@ -1,7 +1,8 @@
 .
 
 📘 Project Activity Log
-🗓️ 28th April 2026
+
+## 🗓️ 28th April 2026
 Ahmad Alisha — Created a new GitHub account.
 
 🗓️ 30th April 2026
