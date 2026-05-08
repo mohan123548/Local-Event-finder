@@ -1,6 +1,6 @@
 # International Student Assistant
 
-> A web app that helps new students navigate essential steps for arriving in Germany.
+> A web app that helps new students to know events and Hackathons and also posting events  in Germany.
 
 ## Team
 
