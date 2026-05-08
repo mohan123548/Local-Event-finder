@@ -1,6 +1,5 @@
                                           Part 1 - Persona
-
-1. Users (Targeted audience)
+Users (Targeted audience)
 
    Young adults aged 18–45, including students, working professionals, and hobby-based communities
 
@@ -20,23 +19,12 @@ Filters based on interests, location, and category
 Opportunities to connect with like-minded people
 Some users may also want to host events, possibly requiring permissions depending on the event type.
 
-1. User Types:
-
-
-User Type 1: End User (Event Seeker)
-People who browse and attend events
-
-User Type 2: Event Organizer
-People who create and manage events or try to do their brand promotions etc .
-
-User Type 3: Admin (System Manager)
-Manages platform content and approvals based on the laws and regulation on diffrent locations once after uploading the approval requires from admin .
 
 
 
-2. Proto-Personas 
+. Proto-Personas 
 
-👤 Persona 1: Event Seeker
+👤 Persona 1:
 
 Name: Rahul Sharma
 Age: 22
@@ -50,7 +38,7 @@ Overall summary :
    2. Near by locations(new city)
    3. Networking and sharing new skills .
 
-👤 Persona 2: Event Organizer
+👤 Persona 2:
 
 Name: Priya Nair
 Age: 34
@@ -65,7 +53,7 @@ Overall summary :
         3. Advertisement about her company.
 
 
-👤 Persona 3: Admin
+👤 Persona 3:
 
 Name: Arjun Patel
 Age: 29
@@ -79,30 +67,29 @@ Overall summary :
         2. Check the motive and verify the government permission for event .
         3.Manages the updates and verify the any trouble causing events and provides the necessary contacts required based on the country .( 102, 100 , 119 ).
 
-3. Features They Love vs Find Confusing
+ Features They Love vs Find Confusing
 
-    3.1.Rahul (Event Seeker)
+    3.1.Rahul 
            Loves: Smart event recommendations based on location & interests
             Because he doesn’t want to scroll endlessly
             Confusing: Too many filters or complicated search options
             Can overwhelm him and slow down decision-making
 
 
-    3.2.Priya (Event Organizer)
+    3.2.Priya 
            Loves: Easy event creation form with promotion tools
            Saves time and helps reach the right audience
            Confusing: Complex approval or permission workflows
            Slows down her ability to publish events.
 
-    3.3.Arjun (Admin)
+    3.3.Arjun 
            Loves: Dashboard with event approval & user management
            Helps maintain platform quality
            Confusing: Poorly organized data or lack of filtering tools
            Makes moderation inefficient       
 
 
-
-4. Most Interesting Persona (For Presentation)
+Most Interesting Persona (Rahul)
 
 Pick Rahul — he’s relatable and easy to explain:
 
@@ -117,17 +104,4 @@ Events:
       community gathering .
       Local advertising events
       Networking 
-      coding computations.
-
-![examples of persona  ](image scenariop.jpeg "personaexample")
-
-persona by alisha : 
-1. Mark Williams – The Community Organizer Age: 45 Background: Runs a local non-profit organization and hosts charity events.
-
-2. Technical Skill Level: Moderate — familiar with basic digital tools but not advanced analytics.
-
-3.Why He Uses the System: To promote his events and reach more local attendees.
-
-4.Loves: Easy event creation and the ability to share across multiple platforms.
-
-5.Finds Confusing: Complicated advertisement or sponsorship management features.`
+      coding computations.`
