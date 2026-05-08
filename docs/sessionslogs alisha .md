@@ -18,7 +18,7 @@ Collected feedback and inputs from them, and listened to their project explanati
 
 ## 📝 Reflection
 1. Which concept was most useful, and why?
-The user stories concept was the most useful because it helped our team convert abstract user needs into clear, testable actions. By focusing on who the user is, what they want, and why, we were able to design features that aligned with real user workflows instead of assumptions.
+2. The user stories concept was the most useful because it helped our team convert abstract user needs into clear, testable actions. By focusing on who the user is, what they want, and why, we were able to design features that aligned with real user workflows instead of assumptions.
 
-2. What assumption about your users did this workshop challenge?
-This workshop challenged my assumption that users always begin with a clear and defined goal. Through personas and scenario-building, I realized that many users operate with incomplete information or mixed motivations. This means our design must support exploration, not just straightforward task completion.
+3. What assumption about your users did this workshop challenge?
+4. This workshop challenged my assumption that users always begin with a clear and defined goal. Through personas and scenario-building, I realized that many users operate with incomplete information or mixed motivations. This means our design must support exploration, not just straightforward task completion.
