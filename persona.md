@@ -1,4 +1,4 @@
-![persona images](personas image.png "example")
+![persona images](personas image.png "persona images")
 # # **🧑‍🤝‍🧑 PERSONAS**
 
 ## **👤 Persona 1 — Alex**
