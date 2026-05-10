@@ -1,6 +1,12 @@
+<html>
+<body>
+<h1># # PROJECT PROGRESS REPORT**</h1>
+</body>
+</html>
+
 Thursday : 30 April
  worked with the github and working process on git manage the files and work division on the project and getting the clarity on the project to work with .
- 
+
 
 Friday : 01-05-2026 
 
