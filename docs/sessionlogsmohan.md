@@ -28,7 +28,7 @@
 - Discussed the three project parts with team members.
 
 ---
-# # #  📅 07 may  2025
+# # #  📅 07 may  2026
 
 # # # **📝 REFLECTION**
 
@@ -63,11 +63,11 @@ Before this workshop, we believed users mainly cared about finding the most popu
 - The project focused on helping people improve their fashion sense using AI technology.
 - The idea was creative, modern, and user-friendly.
 
-# # #  📅 12 may  2025
-- installed  VM Virtualbox
-- installed a Linux Operating System
+# # #  📅 12 may  2026
+- Installed  VM Virtualbox
+- Installed a Linux Operating System
 
-# # #  📅 19 may  2025
-- configured SSH ,FTP,and SCP.
-- installed the Web server.
+# # #  📅 19 may  2026
+- Configured SSH ,FTP,and SCP.
+- Installed the Web server.
 - Deployed a static website.
