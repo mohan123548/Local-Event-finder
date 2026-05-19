@@ -46,3 +46,4 @@ The most useful concepts for our project were personas and user stories. Persona
 
 ## **👨‍💻 ANSWER**
 At first, we assumed that users would prefer many advanced filters and detailed features. However, we learned that most users want a simple, fast, and easy-to-use platform. This workshop helped us focus more on usability and reducing complexity in the interface.
+# # 📅 12 may 2026
