@@ -22,3 +22,12 @@ Collected feedback and inputs from them, and listened to their project explanati
 
 3. What assumption about your users did this workshop challenge?
 4. This workshop challenged my assumption that users always begin with a clear and defined goal. Through personas and scenario-building, I realized that many users operate with incomplete information or mixed motivations. This means our design must support exploration, not just straightforward task completion.
+
+## 🗓️ 12 may 2026
+1. installed VM Virtualbox
+2. installed a linux operating systems
+
+## 🗓️ 19 may 2026
+1. configured SSH,FTP,and SCP
+2. installed the web server Nginx
+3. deployed a static website and uploaded a simple HTML file
