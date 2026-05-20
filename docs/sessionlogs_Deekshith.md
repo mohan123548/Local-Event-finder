@@ -78,5 +78,31 @@ The idea of persona was likes by every one when presented and was agreed by ever
 Through the workshop discussions and user scenario analysis, we gained a deeper understanding of what users truly expect from a local event discovery platform. Rather than focusing only on highly popular events, users showed a stronger preference for features such as personalized recommendations, quick access to accurate event information, and overall convenience in planning their experiences. In addition, we identified the significance of integrating government approval and permission verification into the system. Although often overlooked, this feature plays a crucial role in enhancing trust, ensuring the safety of attendees and organizers, and providing real-time updates regarding event authorization or changes. Incorporating these elements allows the platform to deliver a more secure, reliable, and user-centered event management experience.
 
 
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<h3># # 📅 12 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+Installed Virtualbox on to the local system .
+Try to set up the ubuntu linux server .
+Installed a Linux Operating System.
+Understood the use of VM and linux usage as a server .
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<h3># # 📅 19 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+Installed the Filezila application
+Configured SSH ,FTP,and SCP.
+Worked with the configuration and file transfer on to the local machine and server .
+File transfer process on SCP commands .
+Installed the Web server and connected it to the ubuntu server .
+Deployed a static website.
+
+
+
 </body>
 </html>
