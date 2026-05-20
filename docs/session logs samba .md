@@ -19,3 +19,11 @@ Answer: The concept of value exchange defines the web business. A website must p
 ## Q: What is one assumption about your users that this workshop forced you to challenge?
 Answer: I assumed users would explore the website thoroughly and read all instructions. This workshop made me realize that most users skim and expect intuitive design without needing guidance, so clarity and simplicity are more important than detailed explanations.
 
+#  12 may 2026
+Installed VM Virtualbox
+Installed a Linux Operating System
+
+#  19 may 2026
+Configured SSH ,FTP,and SCP.
+Installed the Web server.
+Deployed a static website.
