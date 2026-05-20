@@ -15,6 +15,7 @@
 
 <h4>**Deekshith Shankar**</h4>
 
+<ul>
  <li>Worked with the github creation .</li>
  <li> Managing working process on git manage the files .</li>
  <li>Group creation and explanation of the project .</li>
@@ -46,6 +47,7 @@
 <li>Listing of the features .</li>
 <li>Implementation and research on the project design and getting the feed back from team .</li>
 <li>Working and research online on application related sites and taking the basic outline .</li>
+</ul>
 
 <hr style="width:50%; height:3px; background-color:purple; border:none;">
 
