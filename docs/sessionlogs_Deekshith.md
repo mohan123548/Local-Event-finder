@@ -15,11 +15,12 @@
 
 <h4>**Deekshith Shankar**</h4>
 
- 1.Worked with the github creation .
- 2. Managing working process on git manage the files .
- 3. Group creation and explanation of the project .
- 4.Created working division on the project and getting the      clarity on the project selection  to work with .
- 5.Updated the git and request sent to all other group members and providing them with git access.
+ <li>Worked with the github creation .</li>
+ <li> Managing working process on git manage the files .</li>
+ <li>Group creation and explanation of the project .</li>
+ <li>Created working division on the project and getting the    clarity on the project selection  to work with .</li>
+ <li>Updated the git and request sent to all other group members and providing them with git access.</li>
+</ul>
 
 <hr style="width:50%; height:3px; background-color:purple; border:none;">
 
@@ -27,12 +28,13 @@
 
 <h4>**Deekshith Shankar**</h4>
 
-
-1.Created a files structure of the project vision and working .
-2.Created the persona and working flow of the project based on the user .
-3.Creating a session on the specific character .
-4.To check the persona details go to file .(persona.md)
-5.Worked on scenarios. 
+<ul>
+<li>Created a files structure of the project vision and working .</li>
+<li>Created the persona and working flow of the project based on the user .</li>
+<li>Creating a session on the specific character .</li>
+<li>To check the persona details go to file .(persona.md)</li>
+<li>Worked on scenarios. </li>
+</ul>
 
 <hr style="width:50%; height:3px; background-color:purple; border:none;">
 
@@ -40,10 +42,10 @@
 
 <h4>**Deekshith Shankar**</h4>
 
-
-1.Listing of the features .
-2.Implementation and research on the project design and getting the feed back from team .
-3.Working and research online on application related sites and taking the basic outline .
+<ul>
+<li>Listing of the features .</li>
+<li>Implementation and research on the project design and getting the feed back from team .</li>
+<li>Working and research online on application related sites and taking the basic outline .</li>
 
 <hr style="width:50%; height:3px; background-color:purple; border:none;">
 
@@ -84,10 +86,12 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 
 <hr style="width:50%; height:3px; background-color:purple; border:none;">
 
-Installed Virtualbox on to the local system .
-Try to set up the ubuntu linux server .
-Installed a Linux Operating System.
-Understood the use of VM and linux usage as a server .
+<ul>
+<li>Installed Virtualbox on to the local system .</li>
+<li>Try to set up the ubuntu linux server .</li>
+<li>Installed a Linux Operating System.</li>
+<li>Understood the use of VM and linux usage as a server .</li>
+</ul>
 
 <hr style="width:50%; height:3px; background-color:purple; border:none;">
 
@@ -95,14 +99,15 @@ Understood the use of VM and linux usage as a server .
 
 <hr style="width:50%; height:3px; background-color:purple; border:none;">
 
-Installed the Filezila application
-Configured SSH ,FTP,and SCP.
-Worked with the configuration and file transfer on to the local machine and server .
-File transfer process on SCP commands .
-Installed the Web server and connected it to the ubuntu server .
-Deployed a static website.
+<ul>
+<li>Installed the Filezila application</li>
+<li>Configured SSH ,FTP,and SCP.</li>
+<li>Worked with the configuration and file transfer on to the local machine and server .</li>
+<li>File transfer process on SCP commands .</li>
+<li>Installed the Web server and connected it to the ubuntu server .</li>
+<li>Deployed a static website.</li>
 
-
+</ul>
 
 </body>
 </html>
