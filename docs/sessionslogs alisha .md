@@ -31,3 +31,5 @@ Collected feedback and inputs from them, and listened to their project explanati
 1. configured SSH,FTP,and SCP
 2. installed the web server Nginx
 3. deployed a static website and uploaded a simple HTML file
+
+## 21 May
