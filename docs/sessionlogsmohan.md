@@ -84,3 +84,7 @@ Before this workshop, we believed users mainly cared about finding the most popu
 8. Tested website on localhost.
 9. Stopped services using Compose.
 10. Uploaded project to GitHub.
+172.17.0.1 - - [21/May/2026:17:30:29 +0000] "GET / HTTP/1.1" 200 377 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
+172.17.0.1 - - [21/May/2026:17:38:46 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
+172.17.0.1 - - [21/May/2026:18:04:13 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
+172.17.0.1 - - [21/May/2026:18:10:57 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
