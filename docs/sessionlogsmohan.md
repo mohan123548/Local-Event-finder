@@ -63,32 +63,24 @@ Before this workshop, we believed users mainly cared about finding the most popu
 - The project focused on helping people improve their fashion sense using AI technology.
 - The idea was creative, modern, and user-friendly.
 
-<h3># # 📅 12 may 2026</h3>
+# # #  📅 12 may  2026
+- Installed  VM Virtualbox
+- Installed a Linux Operating System
 
-<hr style="width:50%; height:3px; background-color:purple; border:none;">
+# # #  📅 19 may  2026
+- Configured SSH ,FTP,and SCP.
+- Installed the Web server.
+- Deployed a static website.
 
-<ul>
-<li>Installed Virtualbox on to the local system .</li>
-<li>Try to set up the ubuntu linux server .</li>
-<li>Installed a Linux Operating System.</li>
-<li>Understood the use of VM and linux usage as a server .</li>
-</ul>
+# # #  📅 21 may  2026
 
-<hr style="width:50%; height:3px; background-color:purple; border:none;">
-
-<h3># # 📅 19 may 2026</h3>
-
-<hr style="width:50%; height:3px; background-color:purple; border:none;">
-
-<ul>
-<li>Installed the Filezila application</li>
-<li>Configured SSH ,FTP,and SCP.</li>
-<li>Worked with the configuration and file transfer on to the local machine and server .</li>
-<li>File transfer process on SCP commands .</li>
-<li>Installed the Web server and connected it to the ubuntu server .</li>
-<li>Deployed a static website.</li>
-
-</ul>
-
-</body>
-</html>
+1. Installed Docker and Docker Compose.
+2. Created a Docker webserver project.
+3. Added an HTML webpage.
+4. Ran nginx using Docker.
+5. Created docker-compose.yml.
+6. Started services using Docker Compose.
+7. Verified containers and logs.
+8. Tested website on localhost.
+9. Stopped services using Compose.
+10. Uploaded project to GitHub.
