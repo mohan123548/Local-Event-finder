@@ -54,4 +54,13 @@ Configured SSH ,FTP,and SCP.
 Installed the Web server.       
 Deployed a static website. 
 # # 📅 21 may 2026
-
+1. Installed Docker and Docker Compose.
+2. Created a Docker webserver project.
+3. Added an HTML webpage.
+4. Ran nginx using Docker.
+5. Created docker-compose.yml.
+6. Started services using Docker Compose.
+7. Verified containers and logs.
+8. Tested website on localhost.
+9. Stopped services using Compose.
+10. Uploaded project to GitHub.
