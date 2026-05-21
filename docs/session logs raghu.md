@@ -52,4 +52,6 @@ Installed a Linux Operating System
 # # 📅 19 may 2026
 Configured SSH ,FTP,and SCP.     
 Installed the Web server.       
-Deployed a static website.      
+Deployed a static website. 
+# # 📅 21 may 2026
+
