@@ -7,10 +7,10 @@
 | Role | Name |
 |---|---|
 | Product Owner | Nai Brahmana Mohan Kumar |
-| Scrum Master |Deeksith Shankar |
-| Developer |Venkath Mothadhi |
+| Scrum Master | Samba Shiva Rao |
+| Developer |  Deeksith Shankar |
 | Developer | Ahmad Alisha |
-| Developer | Samba Shiva Rao |
+| Developer |Venkath Mothadhi |
 
 ## Project Overview
 
