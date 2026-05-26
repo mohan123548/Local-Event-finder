@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GatherGo | Discover & Organize Local & International Events</title>
+  <meta name="description" content="Discover, map, join, and organize local parties, concerts, international summits, and community gatherings. Get transit estimates and travel recommendations with AI.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Root App Wrapper -->
+  <div class="app-container">
+    
+    <!-- HEADER -->
+    <header class="header glass-panel" id="main-header">
+      
+      <!-- Left: Navigation Toggle for Mobile -->
+      <a href="#" class="sidebar-logo" id="brand-logo">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>GatherGo</span>
+      </a>
+
+      <!-- Middle: Search and Geolocation Filters -->
+      <div class="search-bar-container" id="search-filter-container">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="global-search-input" class="search-input" placeholder="Search events, categories, artists, cities...">
+        </div>
+        <button id="geolocation-btn" class="geo-btn" title="Use my current location to search nearby events">
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <span id="geo-btn-text">Nearby</span>
+        </button>
+      </div>
+
+      <!-- Right: Actions (Theme toggle & Account state) -->
+      <div class="header-actions">
+        <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle light or dark theme" title="Switch Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        
+        <!-- Unauthenticated Trigger -->
+        <button id="login-trigger-btn" class="user-auth-btn btn-primary" title="Login or register an account">
+          <i class="fa-solid fa-user-lock"></i> Sign In
+        </button>
+
+        <!-- Authenticated Profile Badge (Hidden by default) -->
+        <div id="user-profile-badge" class="user-profile-badge" style="display: none;" title="Open my dashboard">
+          <img id="user-avatar-small" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80" alt="Profile avatar">
+          <span id="user-name-small">Jane Doe</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar glass-panel" id="navigation-sidebar">
+      <nav class="sidebar-menu">
+        <a href="#discover" id="nav-discover" class="active">
+          <i class="fa-solid fa-compass"></i>
+          <span class="sidebar-text">Discover Feed</span>
+        </a>
+        <a href="#map" id="nav-map">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span class="sidebar-text">Map Finder</span>
+        </a>
+        <a href="#create-event" id="nav-create-event">
+          <i class="fa-solid fa-calendar-plus"></i>
+          <span class="sidebar-text">Organize Event</span>
+        </a>
+        <a href="#ai-travel-chat" id="nav-ai-chat">
+          <i class="fa-solid fa-robot"></i>
+          <span class="sidebar-text">Travel AI Guide</span>
+        </a>
+        <a href="#dashboard" id="nav-dashboard">
+          <i class="fa-solid fa-user-gear"></i>
+          <span class="sidebar-text">My Schedule</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="#logout" id="nav-logout" class="sidebar-menu-logout" style="display: none; padding: 0.8rem 1.2rem; border-radius: 12px; color: #ef4444; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 1rem;">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span class="sidebar-text">Sign Out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN VIEW AREA -->
+    <main class="main-content" id="app-main-view">
+
+      <!-- ================= VIEW 1: DISCOVER FEED ================= -->
+      <section id="view-discover" class="view-section active">
+        
+        <!-- Hero Dynamic Banner Slider -->
+        <div class="hero-slider" id="hero-banner-slider">
+          <div class="hero-slide" id="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&auto=format&fit=crop&q=80')">
+            <div class="hero-content">
+              <span class="hero-tag" id="hero-event-category">FEATURED PARTY</span>
+              <h1 class="hero-title" id="hero-event-title">Tokyo Electronic Neon DJ Night</h1>
+              <div class="hero-meta">
+                <span><i class="fa-solid fa-calendar-days"></i> Tonight, 10:00 PM</span>
+                <span><i class="fa-solid fa-location-dot"></i> Shibuya, Tokyo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Horizontal Quick Filters -->
+        <div class="category-filter-bar" id="category-chips-bar">
+          <button class="category-chip active" data-category="all">
+            <i class="fa-solid fa-globe"></i> All Events
+          </button>
+          <button class="category-chip" data-category="parties">
+            <i class="fa-solid fa-glass-cheers"></i> Parties & Nightlife
+          </button>
+          <button class="category-chip" data-category="tech">
+            <i class="fa-solid fa-laptop-code"></i> Tech & Summits
+          </button>
+          <button class="category-chip" data-category="art">
+            <i class="fa-solid fa-palette"></i> Art & Indie Cinema
+          </button>
+          <button class="category-chip" data-category="community">
+            <i class="fa-solid fa-people-group"></i> Community Gatherings
+          </button>
+        </div>
+
+        <!-- Feed Sorter and Counts -->
+        <div class="feed-header">
+          <h2 class="feed-title" id="results-count-title">Upcoming Gatherings</h2>
+          <div class="feed-sorters">
+            <label for="sort-select" style="display:none;">Sort by</label>
+            <select id="sort-select" aria-label="Sort events by criteria">
+              <option value="upcoming">Soonest First</option>
+              <option value="rating">Highest Rated</option>
+              <option value="distance" disabled id="sort-distance-opt">Distance (Requires Geo)</option>
+              <option value="price-low">Price: Low to High</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Discover Grid of Cards -->
+        <div class="events-grid" id="discover-events-grid">
+          <!-- Populated Dynamically by JavaScript -->
+        </div>
+
+      </section>
+
+      <!-- ================= VIEW 2: MAP FINDER ================= -->
+      <section id="view-map" class="view-section">
+        <div class="map-view-container">
+          
+          <!-- Map Side List -->
+          <div class="map-sidebar" id="map-sidebar-list">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Leaflet Canvas -->
+          <div class="map-canvas-container">
+            <div id="leaflet-map"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= VIEW 3: ORGANIZE EVENT ================= -->
+      <section id="view-create-event" class="view-section">
+        <div class="create-event-container glass-card">
+          <h2>Organize a New Event</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem;">
+            Fill out the details below to publish your event. Choose coordinates or enter a city name to allow users to map and estimate transit routes.
+          </p>
+
+          <form id="create-event-form" class="auth-form">
+            <div class="form-grid">
+              
+              <!-- Event Title -->
+              <div class="form-group full-width">
+                <label for="event-create-title">Event Title</label>
+                <input type="text" id="event-create-title" required placeholder="e.g., Summer Rooftop Beats & Grill">
+              </div>
+
+              <!-- Event Description -->
+              <div class="form-group full-width">
+                <label for="event-create-desc">Description</label>
+                <textarea id="event-create-desc" required placeholder="Tell your attendees what makes this gathering special! What's the itinerary? Are drinks included?"></textarea>
+              </div>
+
+              <!-- Category -->
+              <div class="form-group">
+                <label for="event-create-category">Category</label>
+                <select id="event-create-category" required>
+                  <option value="parties">Parties & Nightlife</option>
+                  <option value="tech">Tech & Summits</option>
+                  <option value="art">Art & Indie Cinema</option>
+                  <option value="community">Community Gatherings</option>
+                </select>
+              </div>
+
+              <!-- Price -->
+              <div class="form-group">
+                <label for="event-create-price">Ticket Price ($)</label>
+                <input type="number" id="event-create-price" required min="0" value="0" placeholder="Enter 0 for free events">
+              </div>
+
+              <!-- Date & Time -->
+              <div class="form-group">
+                <label for="event-create-date">Date & Time</label>
+                <input type="datetime-local" id="event-create-date" required>
+              </div>
+
+              <!-- City / Location Name -->
+              <div class="form-group">
+                <label for="event-create-venue">Venue Name & City</label>
+                <input type="text" id="event-create-venue" required placeholder="e.g., Fabric Club, London">
+              </div>
+
+              <!-- Coordinates Selection for Map -->
+              <div class="form-group">
+                <label for="event-create-lat">Latitude</label>
+                <input type="number" id="event-create-lat" required step="any" placeholder="e.g., 51.5192">
+              </div>
+
+              <div class="form-group">
+                <label for="event-create-lng">Longitude</label>
+                <input type="number" id="event-create-lng" required step="any" placeholder="e.g., -0.1026">
+              </div>
+
+              <!-- Preset Banner Images Selector -->
+              <div class="form-group full-width">
+                <label>Select Banner Style</label>
+                <div class="image-preset-grid" id="create-banner-presets">
+                  <!-- Generated Dynamically -->
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Publish Button -->
+            <button type="submit" class="user-auth-btn btn-primary" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.8rem 2rem;">
+              <i class="fa-solid fa-paper-plane"></i> Publish Event
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ================= VIEW 4: DEDICATED TRAVEL AI CHAT ================= -->
+      <section id="view-ai-chat" class="view-section">
+        <div class="dedicated-chat-view">
+          
+          <!-- Chat sidebar categories/topics -->
+          <div class="chat-sidebar-topics">
+            <h3 class="chat-topics-title">AI Tour Guides</h3>
+            <div class="topic-list" id="chat-tour-guides-list">
+              <div class="topic-item active" data-guide="all-cities">
+                <i class="fa-solid fa-earth-americas"></i> Global Event Planner
+              </div>
+              <div class="topic-item" data-guide="tokyo">
+                <i class="fa-solid fa-torii-gate"></i> Tokyo Nightlife Guru
+              </div>
+              <div class="topic-item" data-guide="london">
+                <i class="fa-solid fa-landmark"></i> London Cultural Expert
+              </div>
+              <div class="topic-item" data-guide="paris">
+                <i class="fa-solid fa-archway"></i> Paris Romantic Guide
+              </div>
+              <div class="topic-item" data-guide="sf">
+                <i class="fa-solid fa-bridge"></i> SF Tech Scout
+              </div>
+            </div>
+            
+            <h3 class="chat-topics-title" style="margin-top: 1rem;">Suggested Prompts</h3>
+            <div class="topic-list">
+              <div class="chat-chip text-wrap" onclick="sendSuggestedChatPrompt('What are some famous local street foods in Tokyo?')">Tokyo famous food?</div>
+              <div class="chat-chip text-wrap" onclick="sendSuggestedChatPrompt('Recommend a cheap clean hostel near Shibuya.')">Tokyo cheap stays?</div>
+              <div class="chat-chip text-wrap" onclick="sendSuggestedChatPrompt('What are must-visit historic pubs near London city center?')">London historic pubs?</div>
+              <div class="chat-chip text-wrap" onclick="sendSuggestedChatPrompt('Suggest budget-friendly vegan spots in San Francisco.')">SF vegan food?</div>
+            </div>
+          </div>
+
+          <!-- Main dedicated conversation area -->
+          <div class="dedicated-chat-canvas">
+            
+            <div class="dedicated-chat-header">
+              <img id="active-guide-avatar" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=80&auto=format&fit=crop&q=80" alt="Guide avatar">
+              <div>
+                <div class="bot-info-title" id="active-guide-name">GatherGo Event Planner AI</div>
+                <div class="bot-info-status">Ready to assist with hotels, food, and transport</div>
+              </div>
+            </div>
+
+            <!-- Messages Stream -->
+            <div class="chat-messages" id="dedicated-chat-stream">
+              <!-- Populated dynamically -->
+            </div>
+
+            <!-- Suggestions slider -->
+            <div class="chat-chips" id="dedicated-chat-suggestions">
+              <!-- Generated Dynamically -->
+            </div>
+
+            <!-- Chat input row -->
+            <form id="dedicated-chat-form" class="chat-input-row">
+              <input type="text" id="dedicated-chat-input" placeholder="Ask about budget hotels, transit routes, or local food recommendations..." autocomplete="off">
+              <button type="submit" class="chat-send-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= VIEW 5: USER SCHEDULE & DASHBOARD ================= -->
+      <section id="view-dashboard" class="view-section">
+        
+        <!-- Locked state for dashboard if not signed in -->
+        <div id="dashboard-locked-state" class="glass-card text-center" style="max-width: 500px; margin: 4rem auto; padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+          <i class="fa-solid fa-lock" style="font-size: 3rem; color: var(--primary);"></i>
+          <h2>Sign In to View Your Schedule</h2>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Track your RSVPs, print tickets, review events, and keep track of gatherings you are organizing!
+          </p>
+          <button id="dashboard-login-btn" class="user-auth-btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 2rem;">
+            <i class="fa-solid fa-user-lock"></i> Sign In / Register
+          </button>
+        </div>
+
+        <!-- Active Dashboard State -->
+        <div id="dashboard-active-state" class="dashboard-grid" style="display: none;">
+          
+          <!-- User Details Sidebar -->
+          <div class="dashboard-user-card glass-panel">
+            <div class="dashboard-avatar-wrapper">
+              <img id="dashboard-avatar-img" class="dashboard-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Avatar large">
+              <label for="avatar-upload" title="Change Avatar"><i class="fa-solid fa-camera"></i></label>
+              <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+            </div>
+
+            <div id="dashboard-user-display" class="dashboard-user-name">Jane Doe</div>
+            <div id="dashboard-user-email" class="dashboard-user-email">janedoe@example.com</div>
+
+            <div class="dashboard-stats-row">
+              <div class="dashboard-stat-item">
+                <div class="stat-num" id="dashboard-stat-rsvps">0</div>
+                <div class="stat-lbl">RSVPs</div>
+              </div>
+              <div class="dashboard-stat-item">
+                <div class="stat-num" id="dashboard-stat-reviews">0</div>
+                <div class="stat-lbl">Reviews</div>
+              </div>
+              <div class="dashboard-stat-item">
+                <div class="stat-num" id="dashboard-stat-organized">0</div>
+                <div class="stat-lbl">Organized</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Schedule list -->
+          <div class="dashboard-main-area">
+            
+            <div class="glass-panel" style="padding: 1.5rem 2rem;">
+              <h3 class="schedule-header"><i class="fa-solid fa-ticket"></i> My Attending Schedule</h3>
+              <div id="dashboard-attending-list">
+                <!-- Dynamically populated or showing empty state -->
+              </div>
+            </div>
+
+            <div class="glass-panel" style="padding: 1.5rem 2rem;">
+              <h3 class="schedule-header"><i class="fa-solid fa-award"></i> Events I Am Organizing</h3>
+              <div id="dashboard-organized-list">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- SLIDING DRAWERS / EVENT DETAIL MODAL (SIDEBAR SLIDER) -->
+  <div id="event-detail-modal" class="modal-overlay">
+    <div class="detail-drawer" id="event-detail-drawer">
+      
+      <!-- Top Splash Banner -->
+      <div id="modal-banner" class="drawer-header-image" style="background-image: url('')">
+        <button class="drawer-close-btn" id="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+        <button class="drawer-fav-btn" id="modal-fav-btn" aria-label="Favorite event"><i class="fa-regular fa-heart"></i></button>
+      </div>
+
+      <!-- Content wrapper -->
+      <div class="drawer-content">
+        
+        <div class="drawer-meta-tags">
+          <span id="modal-category" class="card-category-badge badge-parties" style="position: static;">Category</span>
+          <span id="modal-distance-label" class="card-price-badge free" style="display: none;">3.2 km away</span>
+        </div>
+
+        <h2 id="modal-title" class="drawer-title">Event Title</h2>
+
+        <!-- Specifications Icons -->
+        <div class="drawer-quick-specs">
+          <div class="spec-box">
+            <i class="fa-solid fa-calendar-days"></i>
+            <div>
+              <div class="spec-label">DATE & TIME</div>
+              <div id="modal-spec-date" class="spec-val">July 22, 10:00 PM</div>
+            </div>
+          </div>
+          <div class="spec-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <div class="spec-label">LOCATION</div>
+              <div id="modal-spec-venue" class="spec-val">Shibuya, Tokyo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drawer Detail Tabs Nav -->
+        <div class="drawer-tabs">
+          <button class="drawer-tab active" data-tab="tab-overview">Overview</button>
+          <button class="drawer-tab" data-tab="tab-transit">Directions & Costs</button>
+          <button class="drawer-tab" data-tab="tab-ai-concierge">AI Concierge</button>
+          <button class="drawer-tab" data-tab="tab-reviews" id="modal-tab-reviews-btn">Reviews (0)</button>
+        </div>
+
+        <!-- Drawer Tab Contents -->
+        
+        <!-- Tab 1: OVERVIEW -->
+        <div id="tab-overview" class="tab-pane active">
+          <p id="modal-desc" class="about-description">Event description goes here...</p>
+          
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Gathering Host</h3>
+          <div class="spec-box" style="margin-bottom: 1.5rem;">
+            <i class="fa-solid fa-circle-user" style="font-size: 2rem;"></i>
+            <div>
+              <div id="modal-organizer" class="spec-val" style="font-size: 0.95rem;">GatherGo Official</div>
+              <div class="spec-label">Host Organizer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: DYNAMIC TRANSIT WIDGET -->
+        <div id="tab-transit" class="tab-pane">
+          <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
+            Compare cheapest transit options from your location. We will auto-detect your location or you can specify a start location below.
+          </p>
+
+          <div class="transit-widget">
+            <div class="transit-input-row">
+              <label for="transit-start-input" style="display:none;">Starting location</label>
+              <input type="text" id="transit-start-input" placeholder="Detecting your location...">
+              <button class="geo-btn" id="transit-recalc-btn" style="padding: 0 1rem;" title="Recalculate transit"><i class="fa-solid fa-sync"></i></button>
+            </div>
+
+            <table class="transit-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Duration</th>
+                  <th>Est. Cost</th>
+                </tr>
+              </thead>
+              <tbody id="transit-tbody">
+                <!-- Populated by JS based on coordinates -->
+              </tbody>
+            </table>
+
+            <a href="#" target="_blank" id="modal-gmaps-link" class="transit-route-btn">
+              <i class="fa-solid fa-route"></i> Open Route in Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- Tab 3: CONTEXTUAL EVENT CHATBOT -->
+        <div id="tab-ai-concierge" class="tab-pane">
+          <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
+            Ask the AI Concierge for local guides, hotel stays, famous cuisines, and budget recommendations close to this event's venue.
+          </p>
+
+          <div class="event-chat-container">
+            <!-- Messages Stream -->
+            <div class="chat-messages" id="modal-chat-messages">
+              <!-- Dynamically populated -->
+            </div>
+            
+            <!-- Suggestion chips inside drawer chat -->
+            <div class="chat-chips" id="modal-chat-chips">
+              <!-- Populated dynamically -->
+            </div>
+
+            <form id="modal-chat-form" class="chat-input-row">
+              <input type="text" id="modal-chat-input" placeholder="Ask AI about local food, cheap hotels, etc..." autocomplete="off">
+              <button type="submit" class="chat-send-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Tab 4: RATINGS & REVIEWS -->
+        <div id="tab-reviews" class="tab-pane">
+          
+          <!-- Rating Stats summary -->
+          <div class="review-stats">
+            <div class="review-avg-num" id="modal-review-avg">4.8</div>
+            <div>
+              <div class="review-stars" id="modal-review-stars-avg">
+                <!-- Stars in JS -->
+              </div>
+              <div class="spec-label" id="modal-review-count-lbl">Based on 0 reviews</div>
+            </div>
+          </div>
+
+          <!-- Add Review Form -->
+          <div class="review-form" id="modal-review-form-block">
+            <h4 class="review-form-title">Leave an Experience Review</h4>
+            <form id="modal-submit-review-form">
+              <div class="rating-select" id="modal-review-stars-selector">
+                <i class="fa-solid fa-star" data-rating="1"></i>
+                <i class="fa-solid fa-star" data-rating="2"></i>
+                <i class="fa-solid fa-star" data-rating="3"></i>
+                <i class="fa-solid fa-star" data-rating="4"></i>
+                <i class="fa-solid fa-star" data-rating="5"></i>
+              </div>
+              <textarea id="modal-review-text" required placeholder="Share your experience at this party or gathering. How was the music, atmosphere, or crowd?"></textarea>
+              <button type="submit" class="user-auth-btn btn-primary" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;">
+                Submit Review
+              </button>
+            </form>
+          </div>
+
+          <!-- Reviews Feed List -->
+          <div class="review-list" id="modal-reviews-list">
+            <!-- Dynamically populated reviews -->
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Persistent RSVP bar at the bottom of detail modal -->
+      <footer class="drawer-footer-booking">
+        <div class="booking-price-pane">
+          <span class="booking-price-label">TICKET PRICE</span>
+          <span id="modal-price" class="booking-price-val">$0.00</span>
+        </div>
+        <button id="modal-rsvp-btn" class="user-auth-btn btn-primary" style="padding: 0.8rem 2.5rem; font-size: 1rem; border-radius: 50px;">
+          <i class="fa-solid fa-check"></i> Join Event
+        </button>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- AUTH MODAL (LOGIN / REGISTER) -->
+  <div id="auth-modal-overlay" class="auth-modal-overlay">
+    <div class="auth-modal">
+      
+      <!-- Authentication Tabs -->
+      <div class="auth-modal-tabs">
+        <button class="auth-modal-tab active" id="auth-tab-login">Sign In</button>
+        <button class="auth-modal-tab" id="auth-tab-register">Register</button>
+      </div>
+
+      <!-- Auth Modal Body -->
+      <div class="auth-modal-body">
+        
+        <!-- Form 1: LOGIN -->
+        <form id="auth-login-form" class="auth-form">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" required placeholder="e.g., jane@example.com">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required placeholder="••••••••">
+          </div>
+          <button type="submit" class="user-auth-btn btn-primary" style="margin-top: 0.5rem;">
+            Sign In
+          </button>
+        </form>
+
+        <!-- Form 2: REGISTER -->
+        <form id="auth-register-form" class="auth-form hidden">
+          <div class="form-group">
+            <label for="register-name">Full Name</label>
+            <input type="text" id="register-name" required placeholder="e.g., Jane Doe">
+          </div>
+          <div class="form-group">
+            <label for="register-email">Email Address</label>
+            <input type="email" id="register-email" required placeholder="e.g., jane@example.com">
+          </div>
+          <div class="form-group">
+            <label for="register-password">Password</label>
+            <input type="password" id="register-password" required placeholder="Create a password (min 6 chars)" minlength="6">
+          </div>
+          <button type="submit" class="user-auth-btn btn-primary" style="margin-top: 0.5rem;">
+            Create Account
+          </button>
+        </form>
+
+        <button id="auth-close-btn" class="user-auth-btn btn-outline" style="width: 100%; margin-top: 1rem;">
+          Cancel
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Core Javascript File -->
+  <script src="app.js"></script>
+
+</body>
+</html>
