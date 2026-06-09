@@ -53,7 +53,7 @@ cp .env.example .env   # fill in your values
 docker compose up --build
 ```
 
-The app will be available at `http://localhost:3000`.
+The app will be available at `http://localhost:8080`.
 
 ## Repository Structure
 
@@ -61,7 +61,9 @@ The app will be available at `http://localhost:3000`.
 ├── README.md
 ├── .gitignore
 ├── docs/
-│   └── vision.md            # Product vision, personas, user stories
+│   └── vision.md
+|   └── Sessionlogs     # Session logs,Updates  stories
+|   └── Untitled-1.html #files structure        
 ├── services/
 │   ├── service-a/           # First microservice
 │   └── service-b/           # Second microservice
