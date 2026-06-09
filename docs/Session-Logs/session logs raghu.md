@@ -89,6 +89,13 @@ On this day, we presented our project to our classmates and professor. During th
 
 In addition, other teams presented their project ideas and shared their concepts with the class. Many of the projects were innovative and provided inspiration for exploring new topics and approaches. Among all the presentations, I found "AI Outfit finder" and "Eco connect" particularly interesting. These projects offered unique solutions and differed significantly from existing market offerings, which made them especially inspiring and thought-provoking.
 # 📅 28 may 2026
+The professor has handed a full-stack MVC Demo project, and we started working on the project. We built a fast API application using MVC architecture pattern.       
 # 📅 02 june 2026
-# 📅 04 june 2026
+We have continued our tasks from task 3, and we have implemented CRUD operations on the tasks. and also tested api endpoints using Swagger UI.             
+Connected the frontend api layer (api.js) with backend services. I have learned how MVC separates controllers, services, and models.      
+Faced issues with virtual environment configuration and uvicorn installation.
+ 
+# 📅 04 june 2026  
+Developed a task manager application using FASTAPI and React through an MVC architecture diagram. -Connected frontend and backend and also tested endpoints using Swagger UI and backend communication.
+ 
 
