@@ -86,5 +86,6 @@ Deployed a static website.
 172.18.0.1 - - [21/May/2026:17:51:26 +0000] "GET / HTTP/1.1" 200 199 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
 # # 📅 26 may 2026
 On this day, we presented our project to our classmates and professor. During the presentation, we explained the purpose of our project, its key features, and how it functions. Afterward, we received valuable feedback, suggestions, and insights from both the professor and fellow students regarding potential improvements and future developments.
-In addition, other teams presented their project ideas and shared their concepts with the class. Many of the projects were innovative and provided inspiration for exploring new topics and approaches. Among all the presentations, I found "No Ghost Job Application" and "Local Event Finder" particularly interesting. These projects offered unique solutions and differed significantly from existing market offerings, which made them especially inspiring and thought-provoking.
+
+In addition, other teams presented their project ideas and shared their concepts with the class. Many of the projects were innovative and provided inspiration for exploring new topics and approaches. Among all the presentations, I found "AI Outfit finder" and "Eco connect" particularly interesting. These projects offered unique solutions and differed significantly from existing market offerings, which made them especially inspiring and thought-provoking.
 
