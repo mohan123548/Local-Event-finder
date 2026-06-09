@@ -124,6 +124,63 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 
 </ul>
 
+<h3># # 📅 26 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+
+<li>Project presentation and live demo and providing the berlif explanation on the project to the class and answering the questions and getting the feed back and updating the features and managing to achive the some of the features such as </li> <li>1.Brightness of the websites application (Dark and light mode)</li>
+<li>Managing to the add the location and world  map to the websites and make easy access to the users </li>
+ 
+</ul>
+
+<h3># # 📅 28 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+
+<li>Worked with the Task managment project  .</li>
+<li>Created the files structure and worked with the understanding of the code  .</li>
+<li>Sucessfully getting the output on backend and trying to resolve the front end issue </li>
+<li>Trying to understand the working of files requirements.txt ,docker-compose.yml ,task-services , App.jsx </li>
+
+
+
+</ul>
+
+
+<h3># # 📅 2 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+<li>Worked with the Task managment project  .</li>
+<li>Worked on front end errors and codes  .</li>
+<li>Learning the responsibility of each files . </li>
+<li>Created the fronted codes files and managed to get the both front and backend outputs . </li>
+<li>Attending the Quiz related to the project and scoring around 68.9 %  </li>
+
+
+</ul>
+
+<h3># # 📅 4 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Task managment project  .</li>
+<li>Worked on front end errors and codes  .</li>
+<li>Learning the responsibility of each files . </li>
+<li>Created the fronted codes files and managed to get the both front and backend outputs . </li>
+<li>Attending the Quiz related to the project and scoring around 68.9 %  </li>
+</ul>
+
+
+
+
+
+
 
 
 </body>
