@@ -88,4 +88,7 @@ Deployed a static website.
 On this day, we presented our project to our classmates and professor. During the presentation, we explained the purpose of our project, its key features, and how it functions. Afterward, we received valuable feedback, suggestions, and insights from both the professor and fellow students regarding potential improvements and future developments.
 
 In addition, other teams presented their project ideas and shared their concepts with the class. Many of the projects were innovative and provided inspiration for exploring new topics and approaches. Among all the presentations, I found "AI Outfit finder" and "Eco connect" particularly interesting. These projects offered unique solutions and differed significantly from existing market offerings, which made them especially inspiring and thought-provoking.
+# 📅 28 may 2026
+# 📅 02 june 2026
+# 📅 04 june 2026
 
