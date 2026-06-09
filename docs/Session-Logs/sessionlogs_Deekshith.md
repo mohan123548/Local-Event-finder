@@ -111,5 +111,20 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 
 </ul>
 
+<h3># # 📅 23 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+<li>Worked with the project interface and selecting on programming language .</li>
+<li>Working with features and adding the AI travel agent .</li>
+<li>Worked with the Server update and domain name </li>
+<li>Interface look and the user based persona wokring .</li>
+
+
+</ul>
+
+
+
 </body>
 </html>
