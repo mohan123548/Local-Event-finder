@@ -151,7 +151,7 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 </ul>
 
 
-<h3># # 📅 2 may 2026</h3>
+<h3># # 📅 2 june 2026</h3>
 
 <hr style="width:50%; height:3px; background-color:purple; border:none;">
 
@@ -165,7 +165,7 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 
 </ul>
 
-<h3># # 📅 4 may 2026</h3>
+<h3># # 📅 4 june 2026</h3>
 
 <hr style="width:50%; height:3px; background-color:purple; border:none;">
 <ul>
@@ -176,7 +176,15 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 <li>Attending the Quiz related to the project and scoring around 68.9 %  </li>
 </ul>
 
+<h3># # 📅 11 june 2026</h3>
 
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Working on the excise 2.</li>
+<li>Working on the task.services , </li>
+<li>Learning the debuging </li>
+
+</ul>
 
 
 
