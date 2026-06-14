@@ -55,3 +55,6 @@ Among the projects presented, AI Outfit Finder and Eco Connect were particularly
 
  ## 🗓️ 28 may 2026
  As part of the learning process, the professor assigned a Full-Stack MVC demo project. We initiated the project setup and started building a web application with FastAPI, implementing the MVC architecture to ensure a clear separation of concerns and maintainable code structure.
+
+ ## 🗓️ 02 june 2026 
+ During this session, we continued working on Task 3 and implemented CRUD (Create, Read, Update, Delete) operations for the task management system. We tested all API endpoints using Swagger UI to ensure they were working correctly. We also connected the frontend API layer (api.js) with the backend services for smooth communication between the frontend and backend. Through this work, I learned how the MVC architecture separates models, services, and controllers. I also faced some challenges with virtual environment setup and Uvicorn installation and learned how to resolve them.
