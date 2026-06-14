@@ -45,10 +45,13 @@ Collected feedback and inputs from them, and listened to their project explanati
 10. Uploaded project to Git hub
 
  ## 🗓️ 26 may 2026   
- During this session, our team successfully presented our project to the class and the professor. We provided an overview of the project's objectives, demonstrated its core functionalities, and explained the technologies and design decisions involved in its development. The presentation allowed us to showcase the progress made and highlight the value and practical applications of our solution.
+ During this session, our team successfully presented our project to the class and the professor. We provided an overview of the project's objectives, demonstrated its core functionalities, and explained the technologies and design decisions    involved in its development. The presentation allowed us to showcase the progress made and highlight the value and practical applications of our solution.
 
 Following the demonstration, we participated in a feedback and discussion session. The professor and fellow students shared constructive suggestions regarding usability, functionality, and potential future enhancements. This feedback provided valuable insights that will help guide the next stages of development and improve the overall quality of the project.
 
 The session also included presentations from other project teams. Each team introduced their ideas, methodologies, and proposed solutions, offering a broad perspective on different approaches to problem-solving. These presentations served as an excellent learning opportunity and encouraged the exploration of innovative concepts.
 
 Among the projects presented, AI Outfit Finder and Eco Connect were particularly noteworthy. Both projects addressed real-world challenges with creative and distinctive solutions that differed from many existing market alternatives. Their innovative approaches, strong problem-solving focus, and potential impact made them especially inspiring and thought-provoking.
+
+ ## 🗓️ 28 may 2026
+ As part of the learning process, the professor assigned a Full-Stack MVC demo project. We initiated the project setup and started building a web application with FastAPI, implementing the MVC architecture to ensure a clear separation of concerns and maintainable code structure.
