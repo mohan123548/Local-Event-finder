@@ -58,3 +58,6 @@ Among the projects presented, AI Outfit Finder and Eco Connect were particularly
 
  ## 🗓️ 02 june 2026 
  During this session, we continued working on Task 3 and implemented CRUD (Create, Read, Update, Delete) operations for the task management system. We tested all API endpoints using Swagger UI to ensure they were working correctly. We also connected the frontend API layer (api.js) with the backend services for smooth communication between the frontend and backend. Through this work, I learned how the MVC architecture separates models, services, and controllers. I also faced some challenges with virtual environment setup and Uvicorn installation and learned how to resolve them.
+
+## 🗓️ 04 june 2026 
+ Developed a task manager application using FASTAPI and React through an MVC architecture diagram. -Connected frontend and backend and also tested endpoints using Swagger UI and backend communication.
