@@ -186,7 +186,16 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 
 </ul>
 
+<h3># # 📅 16 june 2026</h3>
 
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the ORM files   .</li>
+<li>Worked on backend code and manage to debug the errors .</li>
+<li>Learning the responsibility of each files . </li>
+<li>Created the backend output and completed the excises 2 . </li>
+<li>Acctivately worked to resolve the errors on the backend . </li>
+</ul>
 
 
 
