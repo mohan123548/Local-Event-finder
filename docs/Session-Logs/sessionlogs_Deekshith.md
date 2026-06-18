@@ -197,6 +197,18 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 <li>Acctivately worked to resolve the errors on the backend . </li>
 </ul>
 
+<h3># # 📅 18 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Migration files   .</li>
+<li>Worked on Excises 3 and problem solving .</li>
+<li>Manage to get the output for the 3 excises on ORM files excution . </li>
+<li>Created the Vision and Alembic files using the Docker compose commands and sucessfully executed . </li>
+<li>Activately workeing on the front end error resolving . </li>
+ <li>Sucessfully got the output of the excises 4 on migration of data . </li>
+</ul>
+
 
 
 
