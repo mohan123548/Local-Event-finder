@@ -70,13 +70,15 @@ Attending the Quiz related to the project and scoring around 68.9 %
 Working on the excise 2.
 Working on the task.services ,
 Learning the debuging
-# # 📅 16 june 2026
+
+# #  16 june 2026
 Worked with the ORM files .
 Worked on backend code and manage to debug the errors .
 Learning the responsibility of each files .
 Created the backend output and completed the excises 2 .
 Acctivately worked to resolve the errors on the backend .
-# # 📅 18 june 2026
+
+# #  18 june 2026
 Worked with the Migration files .
 Worked on Excises 3 and problem solving .
 Manage to get the output for the 3 excises on ORM files excution .
