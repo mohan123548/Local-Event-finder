@@ -58,7 +58,7 @@ Worked on front end errors and codes .
 Learning the responsibility of each files .
 Created the fronted codes files and managed to get the both front and backend outputs .
 Attending the Quiz related to the project and scoring around 68.9 %
-# # 📅 4 june 2026
+# #  4 june 2026
 
 Worked with the Task managment project .
 Worked on front end errors and codes .
