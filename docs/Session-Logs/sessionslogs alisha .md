@@ -61,3 +61,108 @@ Among the projects presented, AI Outfit Finder and Eco Connect were particularly
 
 ## 🗓️ 04 june 2026 
  Developed a task manager application using FASTAPI and React through an MVC architecture diagram. -Connected frontend and backend and also tested endpoints using Swagger UI and backend communication.
+
+
+ <h3># # 📅 23 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+<li>Worked with the project interface and selecting on programming language .</li>
+<li>Working with features and adding the AI travel agent .</li>
+<li>Worked with the Server update and domain name </li>
+<li>Interface look and the user based persona wokring .</li>
+
+
+</ul>
+
+<h3># # 📅 26 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+
+<li>Project presentation and live demo and providing the berlif explanation on the project to the class and answering the questions and getting the feed back and updating the features and managing to achive the some of the features such as </li> <li>1.Brightness of the websites application (Dark and light mode)</li>
+<li>Managing to the add the location and world  map to the websites and make easy access to the users </li>
+ 
+</ul>
+
+<h3># # 📅 28 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+
+<li>Worked with the Task managment project  .</li>
+<li>Created the files structure and worked with the understanding of the code  .</li>
+<li>Sucessfully getting the output on backend and trying to resolve the front end issue </li>
+<li>Trying to understand the working of files requirements.txt ,docker-compose.yml ,task-services , App.jsx </li>
+
+
+
+</ul>
+
+
+<h3># # 📅 2 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+<li>Worked with the Task managment project  .</li>
+<li>Worked on front end errors and codes  .</li>
+<li>Learning the responsibility of each files . </li>
+<li>Created the fronted codes files and managed to get the both front and backend outputs . </li>
+<li>Attending the Quiz related to the project and scoring around 68.9 %  </li>
+
+
+</ul>
+
+<h3># # 📅 4 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Task managment project  .</li>
+<li>Worked on front end errors and codes  .</li>
+<li>Learning the responsibility of each files . </li>
+<li>Created the fronted codes files and managed to get the both front and backend outputs . </li>
+<li>Attending the Quiz related to the project and scoring around 68.9 %  </li>
+</ul>
+
+<h3># # 📅 11 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Working on the excise 2.</li>
+<li>Working on the task.services , </li>
+<li>Learning the debuging </li>
+
+</ul>
+
+<h3># # 📅 16 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the ORM files   .</li>
+<li>Worked on backend code and manage to debug the errors .</li>
+<li>Learning the responsibility of each files . </li>
+<li>Created the backend output and completed the excises 2 . </li>
+<li>Acctivately worked to resolve the errors on the backend . </li>
+</ul>
+
+<h3># # 📅 18 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Migration files   .</li>
+<li>Worked on Excises 3 and problem solving .</li>
+<li>Manage to get the output for the 3 excises on ORM files excution . </li>
+<li>Created the Vision and Alembic files using the Docker compose commands and sucessfully executed . </li>
+<li>Activately workeing on the front end error resolving . </li>
+ <li>Sucessfully got the output of the excises 4 on migration of data . </li>
+</ul>
+
+
+
+
+</body>
+</html>
