@@ -84,30 +84,7 @@ Deployed a static website.
 172.18.0.1 - - [21/May/2026:17:50:54 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
 172.18.0.1 - - [21/May/2026:17:50:54 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
 172.18.0.1 - - [21/May/2026:17:51:26 +0000] "GET / HTTP/1.1" 200 199 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
-# # 📅 26 may 2026
-On this day, we presented our project to our classmates and professor. During the presentation, we explained the purpose of our project, its key features, and how it functions. Afterward, we received valuable feedback, suggestions, and insights from both the professor and fellow students regarding potential improvements and future developments.
 
-In addition, other teams presented their project ideas and shared their concepts with the class. Many of the projects were innovative and provided inspiration for exploring new topics and approaches. Among all the presentations, I found "AI Outfit finder" and "Eco connect" particularly interesting. These projects offered unique solutions and differed significantly from existing market offerings, which made them especially inspiring and thought-provoking.
-# 📅 28 may 2026
-The professor has handed a full-stack MVC Demo project, and we started working on the project. We built a fast API application using MVC architecture pattern.       
-# 📅 02 june 2026
-We have continued our tasks from task 3, and we have implemented CRUD operations on the tasks. and also tested api endpoints using Swagger UI.             
-Connected the frontend api layer (api.js) with backend services. I have learned how MVC separates controllers, services, and models.      
-Faced issues with virtual environment configuration and uvicorn installation.
- 
-# 📅 04 june 2026  
-Developed a task manager application using FASTAPI and React through an MVC architecture diagram. -Connected frontend and backend and also tested endpoints using Swagger UI and backend communication.
-
- <hr style="width:50%; height:3px; background-color:purple; border:none;">
-
-<ul>
-<li>Worked with the project interface and selecting on programming language .</li>
-<li>Working with features and adding the AI travel agent .</li>
-<li>Worked with the Server update and domain name </li>
-<li>Interface look and the user based persona wokring .</li>
-
-
-</ul>
 
 <h3># # 📅 26 may 2026</h3>
 
