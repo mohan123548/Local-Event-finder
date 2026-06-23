@@ -27,3 +27,58 @@ Installed a Linux Operating System
 Configured SSH ,FTP,and SCP.
 Installed the Web server.
 Deployed a static website.
+
+#  21 may 2026
+Installed Docker and Docker Compose.
+Created a Docker webserver project.
+Added an HTML webpage.
+Ran nginx using Docker.
+Created docker-compose.yml.
+Started services using Docker Compose.
+Verified containers and logs.
+Tested website on localhost.
+Stopped services using Compose.
+Uploaded project to GitHub.
+Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:49 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:52 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:52 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:39:50 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:40:12 +0000] "GET / HTTP/1.1" 200 186 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:40:48 +0000] "GET / HTTP/1.1" 200 191 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:48 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:52 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:53 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:54 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:54 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:51:26 +0000] "GET / HTTP/1.1" 200 199 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
+
+# #  26 may 2026
+Project presentation and live demo and providing the berlif explanation on the project to the class and answering the questions and getting the feed back and updating the features and managing to achive the some of the features such as
+1.Brightness of the websites application (Dark and light mode)
+Managing to the add the location and world map to the websites and make easy access to the users
+
+# #  28 may 2026
+Worked with the Task managment project .
+Created the files structure and worked with the understanding of the code .
+Sucessfully getting the output on backend and trying to resolve the front end issue
+Trying to understand the working of files requirements.txt ,docker-compose.yml ,task-services , App.jsx
+
+# #  2 june 2026
+Worked with the Task managment project .
+Worked on front end errors and codes .
+Learning the responsibility of each files .
+Created the fronted codes files and managed to get the both front and backend outputs .
+Attending the Quiz related to the project and scoring around 68.9 %
+# # 📅 4 june 2026
+
+Worked with the Task managment project .
+Worked on front end errors and codes .
+Learning the responsibility of each files .
+Created the fronted codes files and managed to get the both front and backend outputs .
+Attending the Quiz related to the project and scoring around 68.9 %
+# # 📅 11 june 2026
+Working on the excise 2.
+Working on the task.services ,
+Learning the debuging
+# # 📅 16 june 2026
+Worked with the ORM files .
+Worked on backend code and manage to debug the errors .
+Learning the responsibility of each files .
+Created the backend output and completed the excises 2 .
+Acctivately worked to resolve the errors on the backend .
+# # 📅 18 june 2026
+Worked with the Migration files .
+Worked on Excises 3 and problem solving .
+Manage to get the output for the 3 excises on ORM files excution .
+Created the Vision and Alembic files using the Docker compose commands and sucessfully executed .
+Activately workeing on the front end error resolving .
+Sucessfully got the output of the excises 4 on migration of data .
