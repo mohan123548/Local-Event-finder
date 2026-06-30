@@ -210,6 +210,42 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 </ul>
 
 
+<h3># # 📅 23 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Migration files   .</li>
+<li>Worked on Excises 4 and problem solving .</li>
+<li>Manage to get the output for the 4 excises on ORM files excution . </li>
+<li>Activately workeing on the front end error resolving . </li>
+ <li>Sucessfully got the output  on migration of data . </li>
+</ul>
+
+
+<h3># # 📅 25 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the JWT library   .</li>
+<li>Worked on Excises 1-& 2 and problem solving .</li>
+<li>Manage to get the output for the 1 & 2 excises on JWT files excution . </li>
+<li>User login and token generation and password convertion into Hash  </li>
+ <li>Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors  </li>
+</ul>
+
+<h3># # 📅 30 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the JWT library   .</li>
+<li>Worked on Excises 3 & 4 and problem solving .</li>
+<li>Manage to get the output for the 3 & 4 excises on JWT files excution . </li>
+<li>Loin of the user replacing of the owner_id  variable to user  </li>
+ <li>Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors  </li>
+<li>Manage to generate the indivisual user task managing front end with user and password login and   </li>
+ <li>Manage to get the indivisual task managing , creating , deleting , adding users etc  </li>
+ <li>New front end for the indivisual logins   </li>
+</ul>
 
 
 </body>
