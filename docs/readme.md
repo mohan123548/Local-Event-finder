@@ -10,7 +10,7 @@
 | Scrum Master & Developer |  Deeksith Shankar |
 | Developer | Samba Shiva Rao  |
 | Developer | Ahmad Alisha |
-| Developer |Venkath Mothadhi |
+| Developer |Mothadi Venkata Sai Raghu|
 
 ## Project Overview
 
