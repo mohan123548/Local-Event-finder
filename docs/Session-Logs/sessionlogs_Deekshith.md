@@ -247,6 +247,19 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
  <li>New front end for the indivisual logins   </li>
 </ul>
 
+<h3># # 📅 2 july 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the JWT library   .</li>
+<li>Worked on token validation from the website login </li>
+<li> </li>
+<li>User login and token generation and password convertion into Hash  </li>
+ <li>Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors  </li>
+</ul>
+
+
+
 
 </body>
 </html>
