@@ -253,12 +253,21 @@ Through the workshop discussions and user scenario analysis, we gained a deeper 
 <ul>
 <li>Worked with the JWT library   .</li>
 <li>Worked on token validation from the website login </li>
-<li> </li>
-<li>User login and token generation and password convertion into Hash  </li>
- <li>Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors  </li>
+<li> Was able to debug the error and was able to complete the all the excises </li>
+<li>Started with the new auntication excixes and try to pass the auntication of excixes 1 completed .  </li>
+ 
 </ul>
 
+<h3># # 📅 7 july 2026</h3>
 
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Auntication excises   .</li>
+<li>Started createing the tasks where alice can not delete the bobs task  </li>
+<li> Auntication of the logins and the taks of 2 users to be completely secure . </li>
+<li>Completely was able to get the tokens passed from all the 4 excises and was able to debus the excises  </li>
+ 
+</ul>
 
 
 </body>
