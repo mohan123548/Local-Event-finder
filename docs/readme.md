@@ -1,4 +1,4 @@
-# International Student Assistant
+# LOCAL Events Finder (Gather GO)
 
 > A web app that helps new students to know events and Hackathons and also posting events  in Germany.
 
@@ -33,9 +33,9 @@ service-a  ──►  service-b
 | Layer | Technology |
 |---|---|
 | Frontend | HTML , CSS , JAVASCRIPT|
-| Backend |PYTHON FLASK |
-| Database |MongoDB |
-| Deployment | |
+| Backend ||
+| Database | |
+
 
 ## Getting Started
 
