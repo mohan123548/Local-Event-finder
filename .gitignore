@@ -1,32 +1,17 @@
-# service-b
+dist/
+# Dependencies
+node_modules/
 
-_Replace this name with your actual service name (e.g. `frontend`, `worker`, `notifier`)._
+# Build output
 
-## What this service does
 
-_One paragraph describing the responsibility of this microservice._
+# Local env files
+.env
 
-## Running locally
-
-```bash
-# from the repo root
-docker compose up service-b
-```
-
+# Optional editor/temp files
+.vscode/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 ## API endpoints
-
-| Method | Path | Description |
-|---|---|---|
-| GET | /health | Health check |
-| | | |
-
-## Environment variables
-
-| Variable | Required | Description |
-|---|---|---|
-| `PORT` | No (default 3000) | Port the service listens on |
-
-## Tech stack
-
-- Language / framework:
-- Database (if any):
