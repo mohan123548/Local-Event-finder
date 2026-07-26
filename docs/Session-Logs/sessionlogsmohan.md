@@ -236,6 +236,16 @@ Before this workshop, we believed users mainly cared about finding the most popu
  <li>Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors  </li>
 </ul>
 
+<h3># # 📅 7 july 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Auntication excises   .</li>
+<li>Started createing the tasks where alice can not delete the bobs task  </li>
+<li> Auntication of the logins and the taks of 2 users to be completely secure . </li>
+<li>Completely was able to get the tokens passed from all the 4 excises and was able to debus the excises  </li>
+ 
+</ul>
 
 
 
