@@ -1,4 +1,4 @@
-# Local Ivent Finder (Gather Go)
+# Local Events Finder (Gather Go)
 
 > A web app that helps new students to know events and Hackathons and also posting events  in Germany.
 
@@ -50,6 +50,7 @@ To get started with GatherGo, you will need:
    [http://localhost:8000](http://localhost:8000)
 
 ## Repository Structure
+
 ```text
 Local-Event-finder/
 ├── index.html                  # Main application entry point
@@ -72,3 +73,5 @@ Local-Event-finder/
 The source code is heavily documented internally.
 * **`js/app.js`**: Contains the core logic separated into distinct sections (Data State, Initialization, Views, Maps, Auth, etc.).
 * **`scripts/`**: These Python scripts can be executed manually via the terminal if you wish to parse or manipulate new JSON datasets before introducing them to the frontend `data/` folder.
+
+
