@@ -1,4 +1,4 @@
-# International Student Assistant
+# Local Ivent Finder (Gather Go)
 
 > A web app that helps new students to know events and Hackathons and also posting events  in Germany.
 
@@ -13,68 +13,62 @@
 | Developer |Mothadi Venkata Sai Raghu|
 
 ## Project Overview
-
-The **Local Event Finder** is a web-based application designed to help users easily discover nearby events such as social gatherings, cultural programs, workshops, and community activities. The platform provides personalized event recommendations, location-based search, and event details in a simple and user-friendly interface. It aims to connect people with local communities and make event exploration faster, easier, and more accessible.
+GatherGo is a dynamic, frontend-focused web application designed to help users discover, map, and organize local and international events. Features include a curated discover feed, an interactive map finder, event organization tools, and an AI travel concierge interface. It seamlessly blends modern UI aesthetics with practical event-finding functionality.
 
 ## Architecture
-
-
-The **Local Event Finder** project follows a client-server architecture where the frontend is developed using **HTML, CSS, and JavaScript** for user interaction, the backend is built with **Python Flask** to handle application logic and API requests, **MongoDB** is used for storing event and user data, and external APIs are integrated to provide real-time event and location-based information.
-
-```
-service-a  ──►  service-b
-    │
-    ▼
-  database
-```
+The application is built using a purely client-side architecture. It leverages Vanilla JavaScript for all core logic, DOM manipulation, and state management without the overhead of heavy frontend frameworks. Data persistence (such as user sessions and avatars) is managed via the browser's `localStorage`. Event data is loaded dynamically using the Fetch API from local JSON datasets, keeping the application fast and responsive.
 
 ## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Frontend | HTML , CSS , JAVASCRIPT|
-| Backend |PYTHON FLASK |
-| Database |MongoDB |
-| Deployment | |
+* **HTML5**: Semantic structure of the application.
+* **CSS3 (Vanilla)**: Custom styling, responsive layouts, glassmorphism UI elements, and dynamic theme toggling (Dark/Light mode) using CSS variables.
+* **JavaScript (Vanilla JS)**: Core engine for routing, data fetching, user authentication emulation, and interactive map logic.
+* **Leaflet.js**: Used for the "Map Finder" view to render interactive maps and plot event coordinate pins.
+* **Python**: Used for data preparation scripts to parse, inspect, and explore JSON datasets.
 
 ## Getting Started
+To get started with GatherGo, you will need:
+* A modern web browser (Chrome, Firefox, Safari, Edge).
+* Python 3 installed on your machine (to run a local HTTP server).
+* Git (to clone the repository).
 
-### Prerequisites
+## Run Locally
+1. **Clone the repository:**
+   ```bash
+   git clone git@github.com:mohan123548/Local-Event-finder.git
+   cd Local-Event-finder
+   ```
 
-- [Docker](https://docs.docker.com/get-docker/) and Docker Compose installed
-- Git
+2. **Start a local web server:**
+   Since the application fetches local JSON files, running it through a web server is required to avoid CORS (Cross-Origin Resource Sharing) restrictions.
+   ```bash
+   python -m http.server 8000
+   ```
+   *(Alternatively, if you use Node.js, you can run `npx serve`)*
 
-### Run locally
-
-```bash
-git clone https://github.com/<your-org>/<your-repo>.git
-cd <your-repo>
-cp .env.example .env   # fill in your values
-docker compose up --build
-```
-
-The app will be available at `http://localhost:8080`.
+3. **View the Application:**
+   Open your browser and navigate to:
+   [http://localhost:8000](http://localhost:8000)
 
 ## Repository Structure
-
-```
-├── README.md
-├── .gitignore
-├── docs/
-│   └── vision.md
-|   └── Sessionlogs     # Session logs,Updates  stories
-|   └── Untitled-1.html #files structure        
-├── services/
-│   ├── service-a/           # First microservice
-│   └── service-b/           # Second microservice
-└── docker-compose.yml
+```text
+Local-Event-finder/
+├── index.html                  # Main application entry point
+├── css/                        # Stylesheets
+│   └── index.css               # Core styling and themes
+├── js/                         # JavaScript source files
+│   └── app.js                  # Main application logic and data handling
+├── data/                       # Datasets
+│   ├── french_festivals.json   # JSON dataset of events
+│   ├── dataset_info.json       # Metadata for datasets
+│   └── dataset_values_summary.json
+├── scripts/                    # Python data processing scripts
+│   ├── explore_values.py
+│   ├── inspect_dataset.py
+│   └── parse_dataset.py
+└── README.md                   # Project documentation
 ```
 
 ## Documentation
-
-- [Vision Document](docs/vision.md)
-
-
-## License
-
-MIT
+The source code is heavily documented internally.
+* **`js/app.js`**: Contains the core logic separated into distinct sections (Data State, Initialization, Views, Maps, Auth, etc.).
+* **`scripts/`**: These Python scripts can be executed manually via the terminal if you wish to parse or manipulate new JSON datasets before introducing them to the frontend `data/` folder.
