@@ -1,6 +1,17 @@
 # Local Events Finder (Gather Go)
 
-> A web app that helps new students to know events and Hackathons and also posting events  in Germany.
+# Description:
+
+Local Event Finder is an AI-powered web application that helps users discover events based on their location, interests, and preferences. The platform aggregates data from multiple event datasets, including cultural festivals, music concerts, community gatherings, and regional celebrations, to provide personalized event recommendations. It uses machine learning techniques to classify and rank events, making it easier for users to find relevant activities while learning about local cultures and event guidelines.
+
+# Key Features:
+
+📍 Location-based event recommendations
+🤖 AI-powered personalized event suggestions
+🎭 Support for cultural festivals, concerts, and community events
+🔍 Smart search and event filtering
+📅 Event details, dates, locations, and participation guidelines
+🌍 Multi-dataset integration for diverse event coverage
 
 ## Team
 
