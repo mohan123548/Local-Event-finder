@@ -1,4 +1,4 @@
-# GatherGo - Local Event Finder
+ Local Event Finder
 
 ## Project Overview
 GatherGo is a dynamic, frontend-focused web application designed to help users discover, map, and organize local and international events. Features include a curated discover feed, an interactive map finder, event organization tools, and an AI travel concierge interface. It seamlessly blends modern UI aesthetics with practical event-finding functionality.
