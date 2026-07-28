@@ -1,0 +1,34 @@
+{
+  "disciplines": {
+    "Musique": 3229,
+    "Spectacle vivant": 1634,
+    "Livre, littérature": 892,
+    "Cinéma, audiovisuel": 684,
+    "Pluridisciplinaire": 462,
+    "Arts visuels, arts numériques": 382
+  },
+  "periods": {
+    "Saison (21 juin - 5 septembre)": 2644,
+    "Avant-saison (1er janvier - 20 juin)": 2472,
+    "Après-saison (6 septembre - 31 décembre)": 1928,
+    "saison (21 juin - 5 septembre)": 59,
+    "avant-saison (1er janvier - 20 juin)": 26,
+    "Octobre": 19,
+    "Novembre": 14,
+    "Décembre": 10,
+    "Mars": 7,
+    "après-saison (6 septembre - 31 décembre)": 7,
+    "Juin": 6,
+    "Avril": 6,
+    "Juillet": 5,
+    "Mai": 5,
+    "Septembre": 5,
+    "Février": 2,
+    "Période variable selon les territoires": 2,
+    "Août": 2,
+    "Variable selon les années": 1,
+    "Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août": 1,
+    "Ocotbre": 1,
+    "Janvier, Octobre, Novembre": 1
+  }
+}

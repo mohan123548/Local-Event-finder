@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>EVENTRIX | Ultra Experience – User & Admin Hub</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- GSAP for premium effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: #0a0c12;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* animated gradient background */
+    .bg-aura {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 30%, #1a0b2e, #05070a);
+      z-index: -2;
+    }
+    .bg-aura::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(45deg, rgba(225,29,72,0.02) 0px, rgba(225,29,72,0.02) 2px, transparent 2px, transparent 8px);
+      pointer-events: none;
+    }
+
+    /* GLOW & GLASS */
+    .glass-deep {
+      background: rgba(10, 14, 23, 0.65);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 2rem;
+    }
+
+    .app-container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 36px 48px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(135deg, rgba(225,29,72,0.2), rgba(0,0,0,0.6));
+      border-radius: 48px;
+      padding: 64px 48px;
+      margin-bottom: 48px;
+      border: 1px solid rgba(225,29,72,0.3);
+      box-shadow: 0 25px 45px -12px rgba(225,29,72,0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, #fff, #e11d48);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-badge {
+      background: #e11d48;
+      padding: 6px 18px;
+      border-radius: 60px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    /* DROPDOWN + PANEL TOGGLE */
+    .panel-switch {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 28px;
+      justify-content: flex-end;
+    }
+    .pill-btn {
+      background: rgba(30, 35, 48, 0.8);
+      padding: 10px 28px;
+      border-radius: 60px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      border: 1px solid transparent;
+    }
+    .pill-btn.active {
+      background: #e11d48;
+      box-shadow: 0 0 15px #e11d48;
+      border-color: #ff88aa;
+    }
+
+    /* User & Admin Panels */
+    .role-panel {
+      display: none;
+      animation: floatUp 0.5s ease;
+    }
+    .role-panel.active-role {
+      display: block;
+    }
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    /* dashboard cards */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .stat-card {
+      background: rgba(15, 23, 36, 0.7);
+      border-radius: 32px;
+      padding: 24px;
+      border-bottom: 3px solid #e11d48;
+    }
+
+    /* premium events grid */
+    .events-premium {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+    .event-x {
+      background: rgba(12, 18, 28, 0.8);
+      border-radius: 32px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .event-x:hover { transform: translateY(-8px) scale(1.01); border-color: #e11d48; }
+    .event-img {
+      height: 180px;
+      background-size: cover;
+      position: relative;
+    }
+    .dropdown-actions {
+      position: relative;
+      display: inline-block;
+    }
+    .drop-trigger {
+      background: #1e293b;
+      border-radius: 40px;
+      padding: 8px 18px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .drop-menu {
+      position: absolute;
+      background: #0f172fe6;
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 10px 0;
+      min-width: 160px;
+      top: 45px;
+      right: 0;
+      z-index: 50;
+      display: none;
+    }
+    .drop-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+    }
+    .drop-menu a:hover { background: #e11d48; }
+
+    /* admin table */
+    .admin-table {
+      width: 100%;
+      background: rgba(0,0,0,0.4);
+      border-radius: 32px;
+      padding: 20px;
+      border-collapse: collapse;
+    }
+    .admin-table th, .admin-table td {
+      padding: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      text-align: left;
+    }
+
+    /* popup reminder */
+    .popup-reminder {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #0f172a;
+      backdrop-filter: blur(24px);
+      border-left: 6px solid #e11d48;
+      border-radius: 28px;
+      padding: 18px 28px;
+      z-index: 1000;
+      transform: translateX(120%);
+      transition: transform 0.4s ease;
+      box-shadow: 0 20px 35px rgba(0,0,0,0.5);
+    }
+    .popup-reminder.show {
+      transform: translateX(0);
+    }
+
+    button {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-neon {
+      background: linear-gradient(95deg, #e11d48, #a21c3e);
+      border: none;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 780px) {
+      .app-container { padding: 0 20px 32px; }
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="bg-aura"></div>
+<div class="app-container">
+
+  <!-- HERO SECTION with extreme effect -->
+  <div class="hero" id="heroSection">
+    <span class="hero-badge"><i class="fas fa-bolt"></i> LIVE NOW</span>
+    <h1>Where sound meets <br>digital frontier</h1>
+    <p style="max-width:600px; margin-top:20px;">Discover ultra-exclusive events, share your voice, and control the ecosystem — User & Admin in one powerful hub.</p>
+    <div style="margin-top:28px; display: flex; gap: 16px;">
+      <button class="btn-neon" id="exploreCta"><i class="fas fa-magic"></i> Explore Drops</button>
+      <div class="dropdown-actions">
+        <div class="drop-trigger" id="quickMenuTrigger"><i class="fas fa-chevron-down"></i> Quick Menu</div>
+        <div class="drop-menu" id="quickMenu">
+          <a href="#" data-action="events">🎧 Trending Events</a>
+          <a href="#" data-action="blog">📝 Latest Blogs</a>
+          <a href="#" data-action="upload">📸 Media Hub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- USER / ADMIN PANEL TOGGLE -->
+  <div class="panel-switch">
+    <div class="pill-btn active" data-role="user"><i class="fas fa-user-astronaut"></i> User Dashboard</div>
+    <div class="pill-btn" data-role="admin"><i class="fas fa-shield-haltered"></i> Admin Panel</div>
+  </div>
+
+  <!-- ========================= USER PANEL ========================= -->
+  <div id="userPanel" class="role-panel active-role">
+    <div class="stat-grid">
+      <div class="stat-card"><i class="fas fa-calendar-week fa-2x" style="color:#e11d48"></i><h3>12</h3><p>Upcoming Events</p></div>
+      <div class="stat-card"><i class="fas fa-users fa-2x" style="color:#e11d48"></i><h3>1.2k</h3><p>Active RSVPs</p></div>
+      <div class="stat-card"><i class="fas fa-blog fa-2x" style="color:#e11d48"></i><h3>8</h3><p>New Stories</p></div>
+    </div>
+    <h3 style="margin: 30px 0 20px;"><i class="fas fa-fire"></i> Ultra Events · Curated For You</h3>
+    <div id="userEventsContainer" class="events-premium"></div>
+
+    <div style="margin: 50px 0 30px;">
+      <h3><i class="fas fa-newspaper"></i> Community Pulse · Latest Blogs</h3>
+      <div id="userBlogList" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap:24px; margin-top:24px;"></div>
+    </div>
+  </div>
+
+  <!-- ========================= ADMIN PANEL ========================= -->
+  <div id="adminPanel" class="role-panel">
+    <div class="stat-grid">
+      <div class="stat-card"><i class="fas fa-chart-line"></i><h3>245</h3><p>Total Attendees</p><button class="btn-neon" style="margin-top:12px; padding:6px 16px;" id="reminderAdminBtn">Send reminder</button></div>
+      <div class="stat-card"><i class="fas fa-image"></i><h3 id="mediaCount">0</h3><p>Media Assets</p></div>
+      <div class="stat-card"><i class="fas fa-flag-checkered"></i><h3>4</h3><p>Active Promos</p></div>
+    </div>
+    <div style="background:rgba(0,0,0,0.4); border-radius:32px; padding:20px; margin-bottom:30px;">
+      <h4><i class="fas fa-gavel"></i> Manage Events & Content</h4>
+      <button id="quickAddEventBtn" class="btn-neon" style="margin: 15px 0;"><i class="fas fa-plus"></i> Add Flash Event</button>
+      <table class="admin-table" id="adminEventTable">
+        <thead><tr><th>Event</th><th>Genre</th><th>RSVP</th><th>Action</th></tr></thead>
+        <tbody id="adminEventList"></tbody>
+      </table>
+    </div>
+    <div><h4><i class="fas fa-trash-alt"></i> Moderate User Media (recent)</h4>
+    <div id="adminMediaPreview" style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px;"></div></div>
+  </div>
+
+  <!-- global footer -->
+  <div class="footer" style="margin-top:80px; padding: 24px 0; text-align:center; border-top:1px solid rgba(255,255,255,0.05);">EVENTRIX · next-gen event ecosystem · © 2025</div>
+</div>
+
+<!-- POPUP REMINDER (dynamic) -->
+<div id="globalPopup" class="popup-reminder">
+  <i class="fas fa-bell" style="color:#e11d48; margin-right:12px;"></i> <span id="popupMessage">✨ New event added by admin!</span>
+  <button id="closePopupBtn" style="background: none; border: none; color:white; margin-left:16px;">&times;</button>
+</div>
+
+<script>
+  // -------------------- GLOBAL STATE --------------------
+  let eventsList = [
+    { id: 1, artist: "Midnight Echoes", genre: "rock", city: "Austin", venue: "Mohawk Live", date: "May 12, 2025", time: "8:00 PM", img: "https://images.unsplash.com/photo-1501612780327-45045538702b?w=600&h=400&fit=crop", rsvp: 124 },
+    { id: 2, artist: "Neon Pulse", genre: "electronic", city: "Chicago", venue: "Smartbar", date: "May 18, 2025", time: "10:30 PM", img: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop", rsvp: 342 },
+    { id: 3, artist: "The Velvet Leaves", genre: "indie", city: "Brooklyn", venue: "Music Hall", date: "May 25, 2025", time: "7:30 PM", img: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=600&h=400&fit=crop", rsvp: 89 },
+  ];
+
+  let blogPosts = [
+    { id: "b1", title: "5 must-see indie concerts this summer", excerpt: "From Brooklyn to Portland, the energy is electric. Rising stars revealed.", image: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=400&h=200&fit=crop", date: "May 01, 2025" },
+    { id: "b2", title: "Behind the scenes: Neon Pulse interview", excerpt: "Exclusive insights on their creative process and stage design.", image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=200&fit=crop", date: "Apr 28, 2025" }
+  ];
+
+  let mediaLibrary = []; // each { id, type, url, name }
+
+  // helper show popup
+  function showPopup(message, duration = 4000) {
+    const popup = document.getElementById('globalPopup');
+    document.getElementById('popupMessage').innerText = message;
+    popup.classList.add('show');
+    setTimeout(() => {
+      popup.classList.remove('show');
+    }, duration);
+  }
+  document.getElementById('closePopupBtn')?.addEventListener('click', () => {
+    document.getElementById('globalPopup').classList.remove('show');
+  });
+
+  // render USER events
+  function renderUserEvents() {
+    const container = document.getElementById('userEventsContainer');
+    if(!container) return;
+    container.innerHTML = eventsList.map(ev => `
+      <div class="event-x">
+        <div class="event-img" style="background-image:url(${ev.img});"><div style="background:rgba(0,0,0,0.6); padding:6px 12px; position:absolute; bottom:12px; left:12px; border-radius:40px;">🎫 ${ev.rsvp} going</div></div>
+        <div style="padding:20px;">
+          <div style="display:flex; justify-content:space-between;"><strong style="font-size:1.4rem;">${ev.artist}</strong><span style="background:#e11d4820; padding:4px 12px; border-radius:40px;">${ev.genre}</span></div>
+          <div style="margin:12px 0; color:#aaa;"><i class="fas fa-map-pin"></i> ${ev.venue}, ${ev.city}</div>
+          <div style="display:flex; justify-content:space-between; align-items:center;"><span><i class="far fa-calendar"></i> ${ev.date}</span><button class="rsvp-user-btn" data-id="${ev.id}" style="background:#e11d48; border:none; padding:8px 20px; border-radius:40px; font-weight:bold;">RSVP</button></div>
+        </div>
+      </div>
+    `).join('');
+    document.querySelectorAll('.rsvp-user-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => { e.stopPropagation(); showPopup("✅ You're on the guestlist! Check your email.", 2500); });
+    });
+  }
+
+  function renderUserBlogs() {
+    const blogContainer = document.getElementById('userBlogList');
+    if(!blogContainer) return;
+    blogContainer.innerHTML = blogPosts.map(blog => `
+      <div style="background: rgba(15,23,36,0.7); border-radius: 28px; padding: 16px;">
+        <div style="height:140px; background-image:url(${blog.image}); background-size:cover; border-radius: 20px;"></div>
+        <h4 style="margin-top:12px;">${blog.title}</h4>
+        <p style="font-size:0.8rem; color:#aaa;">${blog.excerpt.substring(0,90)}...</p>
+        <div style="margin-top:12px;"><span style="color:#e11d48;">Read more →</span></div>
+      </div>
+    `).join('');
+  }
+
+  // ADMIN: render event table with delete
+  function renderAdminEvents() {
+    const tbody = document.getElementById('adminEventList');
+    if(!tbody) return;
+    tbody.innerHTML = eventsList.map(ev => `
+      <tr>
+        <td>${ev.artist}</td><td>${ev.genre}</td><td>${ev.rsvp}</td>
+        <td><button class="delete-event-btn" data-id="${ev.id}" style="background:#e11d48; border:none; border-radius:30px; padding:4px 12px;">Delete</button></td>
+      </tr>
+    `).join('');
+    document.querySelectorAll('.delete-event-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = parseInt(btn.getAttribute('data-id'));
+        eventsList = eventsList.filter(ev => ev.id !== id);
+        renderAdminEvents();
+        renderUserEvents();
+        showPopup("🗑️ Event removed from platform.", 2000);
+      });
+    });
+  }
+
+  function renderAdminMedia() {
+    const adminMediaDiv = document.getElementById('adminMediaPreview');
+    const mediaCountSpan = document.getElementById('mediaCount');
+    if(adminMediaDiv){
+      if(mediaLibrary.length === 0){
+        adminMediaDiv.innerHTML = "<div style='padding:20px;'>No media uploaded yet.</div>";
+        if(mediaCountSpan) mediaCountSpan.innerText = "0";
+      } else {
+        if(mediaCountSpan) mediaCountSpan.innerText = mediaLibrary.length;
+        adminMediaDiv.innerHTML = mediaLibrary.slice(0,4).map(med => `
+          <div style="width:100px; background:#0f172a; border-radius: 20px; padding:6px; text-align:center;">
+            ${med.type === 'image' ? `<img src="${med.url}" style="width:80px; height:80px; object-fit:cover; border-radius:16px;">` : `<video src="${med.url}" style="width:80px; height:80px; object-fit:cover;"></video>`}
+            <i class="fas fa-trash" data-id="${med.id}" style="cursor:pointer; margin-top:4px; display:block;"></i>
+          </div>
+        `).join('');
+        document.querySelectorAll('#adminMediaPreview .fa-trash').forEach(icon => {
+          icon.addEventListener('click', (e) => {
+            const id = icon.getAttribute('data-id');
+            mediaLibrary = mediaLibrary.filter(m => m.id !== id);
+            renderAdminMedia();
+            renderMediaGalleryUser(); // sync if needed
+            showPopup("Media removed by admin", 1500);
+          });
+        });
+      }
+    }
+  }
+
+  // media gallery for user (simple representation)
+  function renderMediaGalleryUser(){
+    // we don't require full re-render but keep consistency: show on admin side only for moderation.
+  }
+
+  // Dummy file upload simulation (to test admin media)
+  function simulateAddMediaForAdmin(url, type, name){
+    const newMedia = { id: Date.now()+'-'+Math.random(), type: type, url: url, name: name };
+    mediaLibrary.unshift(newMedia);
+    renderAdminMedia();
+    showPopup(`📸 New media "${name}" uploaded.`, 2000);
+  }
+
+  // create flash event (admin)
+  document.getElementById('quickAddEventBtn')?.addEventListener('click', () => {
+    const newName = prompt("Event artist name:");
+    if(!newName) return;
+    const newGenre = prompt("Genre (rock/electronic/indie):") || "indie";
+    const newId = Date.now();
+    const newEvent = {
+      id: newId,
+      artist: newName,
+      genre: newGenre,
+      city: "Downtown",
+      venue: "Neo Venue",
+      date: "Jun 10, 2025",
+      time: "9:00 PM",
+      img: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=400&fit=crop",
+      rsvp: 0
+    };
+    eventsList.push(newEvent);
+    renderAdminEvents();
+    renderUserEvents();
+    showPopup(`🔥 New event "${newName}" added by admin!`, 3000);
+  });
+
+  document.getElementById('reminderAdminBtn')?.addEventListener('click', () => {
+    showPopup("🔔 Reminder sent to all attendees: 'Don't miss tonight's show!'", 3500);
+  });
+
+  // ---- PANEL TOGGLE ----
+  const userPanelDiv = document.getElementById('userPanel');
+  const adminPanelDiv = document.getElementById('adminPanel');
+  const roleBtns = document.querySelectorAll('.pill-btn');
+  roleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const role = btn.getAttribute('data-role');
+      roleBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if(role === 'user') {
+        userPanelDiv.classList.add('active-role');
+        adminPanelDiv.classList.remove('active-role');
+        renderUserEvents(); renderUserBlogs();
+        gsap.fromTo("#userPanel", {opacity:0, y:20}, {opacity:1, y:0, duration:0.5});
+      } else {
+        adminPanelDiv.classList.add('active-role');
+        userPanelDiv.classList.remove('active-role');
+        renderAdminEvents();
+        renderAdminMedia();
+        gsap.fromTo("#adminPanel", {opacity:0, y:20}, {opacity:1, y:0, duration:0.5});
+      }
+    });
+  });
+
+  // DROPDOWN MENU (global quick menu)
+  const dropTrigger = document.getElementById('quickMenuTrigger');
+  const dropMenu = document.getElementById('quickMenu');
+  if(dropTrigger && dropMenu){
+    dropTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropMenu.style.display = dropMenu.style.display === 'block' ? 'none' : 'block';
+    });
+    document.addEventListener('click', () => { dropMenu.style.display = 'none'; });
+    dropMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const action = link.getAttribute('data-action');
+        if(action === 'events') { showPopup("🎸 Hottest events loaded! Check User Dashboard.", 2000); }
+        if(action === 'blog') { showPopup("📖 Latest music blogs ready to read.", 2000); }
+        if(action === 'upload') { showPopup("📁 Media Hub: Drag & drop your images/videos.", 2000); }
+        dropMenu.style.display = 'none';
+      });
+    });
+  }
+
+  // Demo: simulate media upload (user-friendly simulation to showcase admin moderation)
+  window.addEventListener('load', () => {
+    // preload demo media for admin panel illustration
+    setTimeout(() => {
+      if(mediaLibrary.length === 0){
+        simulateAddMediaForAdmin("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=200&h=200&fit=crop", "image", "festival crowd.jpg");
+        simulateAddMediaForAdmin("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&h=200&fit=crop", "image", "backstage.jpg");
+      }
+    }, 800);
+    renderUserEvents();
+    renderUserBlogs();
+    renderAdminEvents();
+    
+    // Extra effect: hero animation
+    gsap.from(".hero", {duration: 1, scale: 0.96, opacity: 0, ease: "back"});
+    // popup reminder on load with greeting
+    setTimeout(() => {
+      showPopup("✨ Welcome to EVENTRIX Ultra! Switch to Admin for full control.", 5000);
+    }, 1000);
+  });
+
+  // Explore CTA Hero
+  document.getElementById('exploreCta')?.addEventListener('click', () => {
+    showPopup("🎧 Explore trending events, exclusive drops inside User Panel!", 3000);
+  });
+
+  // Additional styles for scroll
+  const styleInject = document.createElement('style');
+  styleInject.textContent = `.role-panel { display: none; } .role-panel.active-role { display: block; } .pill-btn { transition: all 0.2s; } .pill-btn:hover { background: #e11d48; } .drop-menu { display: none; }`;
+  document.head.appendChild(styleInject);
+  
+  // add fake rsvp interaction dynamic
+  window.renderUserEvents = renderUserEvents;
+  window.renderUserBlogs = renderUserBlogs;
+  window.renderAdminEvents = renderAdminEvents;
+  window.renderAdminMedia = renderAdminMedia;
+  
+  // fix any re-render on demand
+  document.querySelectorAll('.pill-btn').forEach(btn => {
+    if(btn.getAttribute('data-role') === 'user') btn.click();
+  });
+</script>
+</body>
+</html>
