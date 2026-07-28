@@ -8,7 +8,7 @@
 | **Role / Occupation** | University Student |
 | **Goals** | Find nearby social events, workshops, and student gatherings |
 | **Frustrations** | Misses events because information is scattered across different platforms |
-| **Tech Comfort** | High digital literacy and active social media user |
+| **Tech Comfort** | High digital literacy and active social media user 
 
 ---
 
