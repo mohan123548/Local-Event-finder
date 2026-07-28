@@ -1,4 +1,4 @@
-# Local Events Finder (Gather Go)
+# Local Events Finder 
 
 # Description:
 
