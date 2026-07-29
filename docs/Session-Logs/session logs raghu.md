@@ -2,25 +2,25 @@
 
 ---
 
-# # **📅 28 APRIL 2026**
+<h3># # 📅 28 april 2026</h3>
 ## **👨‍💻 MOTHADI VENKATA SAI RAGHU**
 - Created a GitHub account.
 
 ---
 
-# # **📅 30 APRIL 2026**
+<h3># # 📅 30 april 2026</h3>
 ## **👨‍💻 MOTHADI VENKATA SAI RAGHU**
 - Completed working with GitHub branches.
 
 ---
 
-# # **📅 05 MAY 2026**
+<h3># # 📅 05 may 2026</h3>
 ## **👨‍💻 MOTHADI VENKATA SAI RAGHU**
 - Created User Stories *(Part 3)* for the project.
 
 ---
 
-# # **📅 07 MAY 2026 (THURSDAY)**
+<h3># # 📅 07 may 2026</h3>
 ## **👨‍💻 MOTHADI VENKATA SAI RAGHU**
 - Listed the user stories for the project.
 - Discussed project ideas with two groups.
@@ -46,14 +46,14 @@ The most useful concepts for our project were personas and user stories. Persona
 
 ## **👨‍💻 ANSWER**
 At first, we assumed that users would prefer many advanced filters and detailed features. However, we learned that most users want a simple, fast, and easy-to-use platform. This workshop helped us focus more on usability and reducing complexity in the interface.
-# # 📅 12 may 2026
+<h3># # 📅 12 may 2026</h3>
 Installed VM Virtualbox        
 Installed a Linux Operating System
-# # 📅 19 may 2026
+<h3># # 📅 19 may 2026</h3>
 Configured SSH ,FTP,and SCP.     
 Installed the Web server.       
 Deployed a static website. 
-# # 📅 21 may 2026
+<h3># # 📅 21 may 2026</h3>
 1. Installed Docker and Docker Compose.
 2. Created a Docker webserver project.
 3. Added an HTML webpage.
