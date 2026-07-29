@@ -2,25 +2,25 @@
 
 ---
 
-# # **📅 28 APRIL 2026**
+<h3># # 📅 28 april 2026</h3>
 ## **👨‍💻 MOTHADI VENKATA SAI RAGHU**
 - Created a GitHub account.
 
 ---
 
-# # **📅 30 APRIL 2026**
+<h3># # 📅 30 april 2026</h3>
 ## **👨‍💻 MOTHADI VENKATA SAI RAGHU**
 - Completed working with GitHub branches.
 
 ---
 
-# # **📅 05 MAY 2026**
+<h3># # 📅 05 may 2026</h3>
 ## **👨‍💻 MOTHADI VENKATA SAI RAGHU**
 - Created User Stories *(Part 3)* for the project.
 
 ---
 
-# # **📅 07 MAY 2026 (THURSDAY)**
+<h3># # 📅 07 may 2026</h3>
 ## **👨‍💻 MOTHADI VENKATA SAI RAGHU**
 - Listed the user stories for the project.
 - Discussed project ideas with two groups.
@@ -46,14 +46,14 @@ The most useful concepts for our project were personas and user stories. Persona
 
 ## **👨‍💻 ANSWER**
 At first, we assumed that users would prefer many advanced filters and detailed features. However, we learned that most users want a simple, fast, and easy-to-use platform. This workshop helped us focus more on usability and reducing complexity in the interface.
-# # 📅 12 may 2026
+<h3># # 📅 12 may 2026</h3>
 Installed VM Virtualbox        
 Installed a Linux Operating System
-# # 📅 19 may 2026
+<h3># # 📅 19 may 2026</h3>
 Configured SSH ,FTP,and SCP.     
 Installed the Web server.       
 Deployed a static website. 
-# # 📅 21 may 2026
+<h3># # 📅 21 may 2026</h3>
 1. Installed Docker and Docker Compose.
 2. Created a Docker webserver project.
 3. Added an HTML webpage.
@@ -177,19 +177,21 @@ Deployed a static website.
 
 </body>
 </html>
-# # 📅 23 june 2026
+<h3># # 📅 23 june 2026</h3>   
 Worked with the Migration files .
 Worked on Excises 4 and problem solving .
 Manage to get the output for the 4 excises on ORM files excution .
 Activately workeing on the front end error resolving .
 Sucessfully got the output on migration of data .
-# # 📅 25 june 2026
+
+<h3># # 📅 25 june 2026</h3>
 Worked with the JWT library .
 Worked on Excises 1-& 2 and problem solving .
 Manage to get the output for the 1 & 2 excises on JWT files excution .
 User login and token generation and password convertion into Hash
 Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors
-# # 📅 30 june 2026
+
+<h3># # 📅 30 june 2026</h3>
 Worked with the JWT library .
 Worked on Excises 3 & 4 and problem solving .
 Manage to get the output for the 3 & 4 excises on JWT files excution .
@@ -198,12 +200,12 @@ Manage to work with the back end login sucessfull and try to chekc the other out
 Manage to generate the indivisual user task managing front end with user and password login and
 Manage to get the indivisual task managing , creating , deleting , adding users etc
 New front end for the indivisual logins
-# # 📅 2 july 2026
+<h3># # 📅 2 july 2026</h3>
 Worked with the JWT library .
 Worked on token validation from the website login
 User login and token generation and password convertion into Hash
 Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors
-# # 📅 7 july 2026
+<h3># # 📅 7 july 2026</h3>
 Worked with the Auntication excises .
 Started createing the tasks where alice can not delete the bobs task
 Auntication of the logins and the taks of 2 users to be completely secure .

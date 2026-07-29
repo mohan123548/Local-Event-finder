@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login · Local Event Finder</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="auth.css?v=1" />
+</head>
+
+<body class="admin-page" data-auth-page="admin">
+  <main class="auth-page">
+    <section class="auth-shell">
+      <aside class="auth-visual">
+        <a class="brand" href="index.html">
+          <img src="logo-mark.svg" alt="" />
+          <span>
+            <strong>Local Event Finder</strong>
+            <small>CONTROL CENTER</small>
+          </span>
+        </a>
+
+        <div class="visual-content">
+          <span class="security-label">
+            <i class="fa-solid fa-shield-halved"></i>
+            SECURE ADMIN PORTAL
+          </span>
+
+          <h1>Command your event platform.</h1>
+          <p>Restricted access for authorized administrators. Manage events, users, and platform operations from one secure workspace.</p>
+
+          <div class="feature-list">
+            <div class="feature-item">
+              <span class="feature-icon">
+                <i class="fa-solid fa-user-shield"></i>
+              </span>
+              <span>
+                <strong>Role protection</strong>
+                <small>Only admin accounts can continue</small>
+              </span>
+            </div>
+
+            <div class="feature-item">
+              <span class="feature-icon">
+                <i class="fa-solid fa-lock"></i>
+              </span>
+              <span>
+                <strong>Security controls</strong>
+                <small>JWT-protected administrator session</small>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <footer class="visual-footer">
+          <span class="system-status">FastAPI authentication ready</span>
+          <span>Encrypted password storage</span>
+        </footer>
+      </aside>
+
+      <section class="auth-panel">
+        <a class="brand mobile-brand" href="index.html">
+          <img src="logo-mark.svg" alt="" />
+          <span>
+            <strong>Local Event Finder</strong>
+            <small>ADMIN PORTAL</small>
+          </span>
+        </a>
+
+        <div class="panel-heading">
+          <p>ADMINISTRATOR ACCESS</p>
+          <h2>Admin sign in</h2>
+          <span>Use the administrator account created from your FastAPI backend.</span>
+        </div>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="input-group">
+            <label for="email">Email address</label>
+            <div class="input-wrap">
+              <i class="fa-regular fa-envelope"></i>
+              <input id="email"
+                     name="email"
+                     type="email"
+                     autocomplete="email"
+                     placeholder="you@example.com"
+                     required />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-key"></i>
+              <input id="password"
+                     name="password"
+                     type="password"
+                     autocomplete="current-password"
+                     placeholder="Enter your password"
+                     minlength="8"
+                     required />
+
+              <button class="password-toggle"
+                      type="button"
+                      data-password-toggle
+                      aria-label="Show password">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-option">
+              <input name="remember" type="checkbox" />
+              Keep me signed in
+            </label>
+
+            <button class="text-link" type="button" data-forgot-password>
+              Forgot password?
+            </button>
+          </div>
+
+          <button id="loginButton" class="submit-button" type="submit">
+            <span>Enter admin portal</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <p id="formMessage" class="form-message" role="status"></p>
+
+          <div class="divider">OR</div>
+
+          <a class="secondary-action" href="user-login.html"><i class="fa-solid fa-arrow-left"></i>&nbsp; Return to user login</a>
+        </form>
+
+        <footer class="panel-footer">
+          Protected by JWT authentication · <a href="user-login.html">Open member login</a>
+        </footer>
+      </section>
+    </section>
+  </main>
+
+  <script src="auth.js?v=1"></script>
+</body>
+</html>
