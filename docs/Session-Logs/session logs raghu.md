@@ -183,12 +183,14 @@ Worked on Excises 4 and problem solving .
 Manage to get the output for the 4 excises on ORM files excution .
 Activately workeing on the front end error resolving .
 Sucessfully got the output on migration of data .
+
 # # 📅 25 june 2026
 Worked with the JWT library .
 Worked on Excises 1-& 2 and problem solving .
 Manage to get the output for the 1 & 2 excises on JWT files excution .
 User login and token generation and password convertion into Hash
 Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors
+
 # # 📅 30 june 2026
 Worked with the JWT library .
 Worked on Excises 3 & 4 and problem solving .
