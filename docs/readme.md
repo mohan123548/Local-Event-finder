@@ -1,347 +1,137 @@
-<div align="center">
+Local Event Finder
 
-🌍 Local Event Finder
+Description:
 
-Discover nearby events. Build your schedule. Experience your city.
+Local Event Finder is an AI-powered web application that helps users discover nearby events based on their location, interests, categories, and preferences.
 
-A modern event-discovery platform for finding cultural festivals, music concerts, technology meetups, food events, art programs, and community gatherings.
+The platform supports cultural festivals, music concerts, technology meetups, food events, art programs, community gatherings, and regional celebrations. It provides personalized event suggestions, smart search, interactive maps, user authentication, saved schedules, and event-management tools.
 
-<br>
+The project uses a modern Vanilla JavaScript frontend with a FastAPI backend, SQLAlchemy, and SQLite.
 
+Key Features:
 
+📍 Location-based event recommendations🤖 Smart and personalized event suggestions🎭 Cultural festivals, concerts, art, food, technology, and community events🔍 Smart search, category filtering, and sorting🗺️ Interactive event map using Leaflet.js📅 Event dates, locations, organizers, and participation details🔖 Save events and create a personal schedule👤 User registration and login🛡️ Separate administrator login and dashboard➕ Create and publish new events🌙 Dark and light theme support📱 Responsive design for desktop, tablet, and mobile🌍 Multi-dataset integration for diverse event coverage
 
-<br>
+Team
 
-Features •Architecture •Installation •API •Team •Roadmap
+Role
 
-</div>
+Name
 
-✨ About the Project
+Product Owner & Developer
 
-Local Event Finder helps users discover events based on location, category, interests, and preferences.
+Nai Brahmana Mohan Kumar
 
-The application combines a responsive Vanilla JavaScript frontend with a FastAPI backend. It supports event discovery, interactive maps, search and filtering, authentication, saved schedules, event creation, and a recommendation-ready interface.
+Scrum Master & Developer
 
-The project is designed for academic learning and can be expanded with real machine-learning recommendation models in future versions.
+Deeksith Shankar
 
-🚀 Features
+Developer
 
-<table>
-<tr>
-<td width="50%" valign="top">
+Samba Shiva Rao
 
-🔎 Smart Event Discovery
+Developer
 
-Search by title, city, category, venue, or organizer
+Ahmad Alisha
 
-Filter events by category
+Developer
 
-Sort events by date or title
+Mothadi Venkata Sai Raghu
 
-Switch between grid and list layouts
+Project Overview
 
-Explore featured and recommended events
+Local Event Finder is a dynamic event-discovery web application designed to help users find, explore, save, and organize local and international events.
 
-</td>
-<td width="50%" valign="top">
+The application includes a curated discovery feed, an interactive map finder, event-organization tools, user and administrator authentication, saved schedules, and a smart local event assistant.
 
-📍 Location and Maps
+The project combines a modern and responsive user interface with a FastAPI REST backend for storing, retrieving, and managing event information.
 
-Browser-based geolocation
+Architecture
 
-Nearby-event distance calculation
+The application uses a client-server architecture.
 
-Leaflet.js interactive map
+The frontend communicates with the FastAPI backend using the Fetch API and JSON. The backend uses SQLAlchemy to manage data stored in an SQLite database.
 
-Event markers using latitude and longitude
+Web Browser
+    |
+    | HTTP Requests / JSON
+    v
+HTML, CSS, and Vanilla JavaScript Frontend
+    |
+    | REST API
+    v
+FastAPI Backend
+    |
+    | SQLAlchemy ORM
+    v
+SQLite Database
 
-Automatic map positioning
+User and administrator authentication is handled using JWT access tokens and securely hashed passwords.
 
-</td>
-</tr>
+Tech Stack
 
-<tr>
-<td width="50%" valign="top">
+HTML5: Provides the semantic structure of the application.
 
-👤 User Experience
+CSS3 (Vanilla): Used for responsive layouts, animations, glassmorphism components, Aurora-style colors, and dark/light theme support.
 
-User registration and login
+JavaScript (Vanilla JS): Handles search, filtering, sorting, event rendering, authentication, API requests, saved schedules, modals, and interface interactions.
 
-Saved-event schedule
+FastAPI: Provides the backend REST API for events, user registration, user login, administrator login, and protected account information.
 
-Protected member area
+SQLAlchemy: Manages database models, queries, and communication between FastAPI and SQLite.
 
-Password visibility controls
+SQLite: Stores event and user information during local development.
 
-Responsive mobile interface
+Pydantic: Validates API requests and responses.
 
-</td>
-<td width="50%" valign="top">
+Leaflet.js: Renders the interactive map and displays event location markers.
 
-🛡️ Administrator Access
+OpenStreetMap: Provides map tiles for the Leaflet map.
 
-Separate administrator login
+JWT Authentication: Protects user and administrator sessions.
 
-Role-based authorization
+Argon2 Password Hashing: Securely hashes user and administrator passwords.
 
-Protected admin dashboard
+Python: Used for backend development, dataset preparation, inspection, cleaning, and importing event records.
 
-Event-management-ready interface
+Main Modules
 
-User and analytics sections
+Discover Feed: Displays featured and recommended events.
 
-</td>
-</tr>
+Map Finder: Shows events on an interactive map using latitude and longitude.
 
-<tr>
-<td width="50%" valign="top">
+My Schedule: Stores the events saved by the user.
 
-🎨 Modern Interface
+Organize Event: Allows new event information to be submitted to the backend.
 
-Aurora-inspired visual theme
+City Assistant: Suggests events using categories, locations, and search terms.
 
-Glassmorphism components
+User Portal: Provides registration, login, and protected user access.
 
-Dark and light modes
+Admin Portal: Provides role-protected administrator access and management-ready pages.
 
-Animated interactions
+Getting Started
 
-Desktop, tablet, and mobile support
-
-</td>
-<td width="50%" valign="top">
-
-🧠 Recommendation Ready
-
-Category-based suggestions
-
-Search-term matching
-
-City-aware recommendations
-
-Saved-event preference support
-
-Architecture ready for ML ranking
-
-</td>
-</tr>
-</table>
-
-🖥️ Application Modules
-
-Module
-
-Purpose
-
-Discover
-
-Browse featured and recommended events
-
-Map Finder
-
-View events geographically using Leaflet
-
-My Schedule
-
-Access bookmarked events
-
-Organize Event
-
-Create and publish new events
-
-City Assistant
-
-Suggest events using available event data
-
-User Portal
-
-Registration, login, and protected member access
-
-Admin Portal
-
-Role-protected administrator dashboard
-
-🏗️ Architecture
-
-flowchart LR
-    A[Web Browser] --> B[HTML / CSS / Vanilla JavaScript]
-    B -->|Fetch API / JSON| C[FastAPI REST API]
-    C --> D[SQLAlchemy ORM]
-    D --> E[(SQLite Database)]
-    B --> F[Leaflet.js]
-    F --> G[OpenStreetMap]
-    C --> H[JWT Authentication]
-
-Frontend
-
-HTML5
-
-CSS3
-
-Vanilla JavaScript
-
-Leaflet.js
-
-Font Awesome
-
-Fetch API
-
-Browser Geolocation API
-
-LocalStorage and SessionStorage
-
-Backend
-
-Python
-
-FastAPI
-
-SQLAlchemy
-
-Pydantic
-
-SQLite
-
-Uvicorn
-
-JWT authentication
-
-Argon2 password hashing
-
-🧰 Technology Stack
-
-Technology
-
-Usage
-
-HTML5
-
-Semantic application structure
-
-CSS3
-
-Responsive design, animation, themes, and glassmorphism
-
-Vanilla JavaScript
-
-UI logic, filtering, routing, API calls, and state
-
-FastAPI
-
-REST API and backend services
-
-SQLAlchemy
-
-Database models and queries
-
-SQLite
-
-Local development database
-
-Pydantic
-
-Request and response validation
-
-Leaflet.js
-
-Interactive map rendering
-
-OpenStreetMap
-
-Map tiles
-
-JWT
-
-Authentication tokens
-
-Argon2
-
-Secure password hashing
-
-Python
-
-Backend and dataset-preparation scripts
-
-📁 Repository Structure
-
-Local-Event-finder/
-│
-├── frontend/
-│   ├── index.html
-│   ├── user-login.html
-│   ├── admin-login.html
-│   ├── register.html
-│   ├── user-home.html
-│   ├── admin-dashboard.html
-│   ├── styles.css
-│   ├── auth.css
-│   ├── app.js
-│   ├── auth.js
-│   ├── dashboard.js
-│   │
-│   └── assets/
-│       ├── logo-mark.svg
-│       ├── event-music.svg
-│       ├── event-tech.svg
-│       ├── event-art.svg
-│       ├── event-food.svg
-│       └── event-community.svg
-│
-├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── database.py
-│   │   ├── models.py
-│   │   ├── schemas.py
-│   │   ├── auth_models.py
-│   │   ├── auth_schemas.py
-│   │   ├── auth_security.py
-│   │   ├── create_admin.py
-│   │   │
-│   │   └── routers/
-│   │       ├── events.py
-│   │       └── auth.py
-│   │
-│   ├── requirements.txt
-│   ├── .env.example
-│   └── events.db
-│
-├── data/
-│   ├── french_festivals.json
-│   ├── dataset_info.json
-│   └── dataset_values_summary.json
-│
-├── scripts/
-│   ├── explore_values.py
-│   ├── inspect_dataset.py
-│   └── parse_dataset.py
-│
-└── README.md
-
-The exact file names may vary depending on the current development branch.
-
-⚡ Getting Started
-
-Prerequisites
-
-Install the following:
+To run Local Event Finder, you will need:
 
 Python 3.10 or later
 
 Git
 
-A modern web browser
+A modern web browser such as Chrome, Firefox, Safari, or Edge
 
 PowerShell, Command Prompt, or another terminal
+
+Run Locally
 
 1. Clone the Repository
 
 git clone https://github.com/mohan123548/Local-Event-finder.git
 cd Local-Event-finder
 
-🔧 Backend Setup
+2. Set Up the Backend
 
-Open a terminal inside the backend folder:
+Open the backend folder:
 
 cd backend
 
@@ -349,99 +139,68 @@ Create a virtual environment:
 
 python -m venv venv
 
-Activate it on Windows:
+Activate the virtual environment on Windows:
 
 .\venv\Scripts\Activate.ps1
 
-Install dependencies:
+Install the required packages:
 
 python -m pip install -r requirements.txt
 
-Install authentication dependencies when they are not already included:
+When the authentication packages are not already included, install them using:
 
 python -m pip install PyJWT "pwdlib[argon2]" email-validator
 
-Start FastAPI:
+Start the FastAPI backend:
 
 python -m uvicorn app.main:app --reload --port 8001
 
-Service
-
-Address
-
-Backend
-
-http://127.0.0.1:8001
-
-Swagger API documentation
+Open the API documentation:
 
 http://127.0.0.1:8001/docs
 
-ReDoc documentation
+3. Set Up the Frontend
 
-http://127.0.0.1:8001/redoc
-
-🎨 Frontend Setup
-
-Open another terminal inside the frontend folder:
+Open another terminal and enter the frontend folder:
 
 cd frontend
 
-Start the frontend:
+Start the frontend server:
 
 python -m http.server 5500
 
-Page
-
-Address
-
-Main application
+Open the application:
 
 http://127.0.0.1:5500
 
-User login
+4. Open the Login Pages
+
+User login:
 
 http://127.0.0.1:5500/user-login.html
 
-User registration
+User registration:
 
 http://127.0.0.1:5500/register.html
 
-Admin login
+Administrator login:
 
 http://127.0.0.1:5500/admin-login.html
 
-🔐 Create an Administrator
+Create an Administrator Account
 
-Run this command from the backend folder:
+Run the following command from the backend folder:
 
 .\venv\Scripts\python.exe -m app.create_admin `
   --name "Administrator" `
   --email "admin@example.com" `
   --password "ChangeThis123!"
 
-Use a strong password and never commit real administrator credentials to GitHub.
+Use a strong password and do not upload real administrator credentials to GitHub.
 
-⚙️ Environment Configuration
+API Endpoints
 
-Create a .env file inside the backend folder:
-
-DATABASE_URL=sqlite:///./events.db
-AUTH_SECRET_KEY=replace-this-with-a-long-random-secret
-ACCESS_TOKEN_EXPIRE_MINUTES=60
-FRONTEND_ORIGINS=http://127.0.0.1:5500,http://localhost:5500
-
-Generate a secure authentication secret:
-
-python -c "import secrets; print(secrets.token_hex(32))"
-
-Add the generated value to AUTH_SECRET_KEY.
-
-Do not commit the real .env file.
-
-🔌 API Endpoints
-
-Events API
+Event Endpoints
 
 Method
 
@@ -479,7 +238,7 @@ DELETE
 
 Delete an event
 
-Authentication API
+Authentication Endpoints
 
 Method
 
@@ -491,7 +250,7 @@ POST
 
 /api/auth/register
 
-Register a user
+Register a new user
 
 POST
 
@@ -511,19 +270,67 @@ GET
 
 Retrieve the authenticated account
 
-📊 Dataset Integration
+Repository Structure
 
-The application can process event information from multiple datasets.
+Local-Event-finder/
+├── frontend/
+│   ├── index.html                  # Main application page
+│   ├── user-login.html             # User login page
+│   ├── admin-login.html            # Administrator login page
+│   ├── register.html               # User registration page
+│   ├── user-home.html              # Protected user page
+│   ├── admin-dashboard.html        # Protected administrator page
+│   ├── styles.css                  # Main application styles
+│   ├── auth.css                    # Authentication page styles
+│   ├── app.js                      # Main frontend logic
+│   ├── auth.js                     # Registration and login logic
+│   ├── dashboard.js                # Protected page verification
+│   └── assets/                     # Logos and event images
+│
+├── backend/
+│   ├── app/
+│   │   ├── main.py                 # FastAPI application entry point
+│   │   ├── database.py             # Database connection
+│   │   ├── models.py               # Event database models
+│   │   ├── schemas.py              # Event validation schemas
+│   │   ├── auth_models.py          # User database model
+│   │   ├── auth_schemas.py         # Authentication schemas
+│   │   ├── auth_security.py        # Password and JWT security
+│   │   ├── create_admin.py         # Administrator creation script
+│   │   └── routers/
+│   │       ├── events.py            # Event API routes
+│   │       └── auth.py              # Authentication API routes
+│   ├── requirements.txt
+│   ├── .env.example
+│   └── events.db
+│
+├── data/
+│   ├── french_festivals.json
+│   ├── dataset_info.json
+│   └── dataset_values_summary.json
+│
+├── scripts/
+│   ├── explore_values.py
+│   ├── inspect_dataset.py
+│   └── parse_dataset.py
+│
+└── README.md
 
-Supported fields include:
+Dataset Integration
 
-Event title and description
+The application can use multiple event datasets containing:
+
+Event title
+
+Event description
 
 Category
 
 Start and end dates
 
-City and venue
+City
+
+Venue
 
 Latitude and longitude
 
@@ -533,27 +340,29 @@ Event image
 
 Source URL
 
-Participation information
+Participation guidelines
 
-Python utilities inside the scripts folder can inspect, clean, transform, and import event datasets.
+Python scripts inside the scripts folder can be used to inspect, clean, transform, and import event information.
 
-🧠 Recommendation Approach
+Smart Recommendation Approach
 
-The current interface can recommend events using:
+The current application can provide event suggestions using:
 
 Search keywords
 
-Selected category
+Selected categories
 
-City
+User location
+
+Event city
 
 Event date
 
-Description
+Event description
 
 Saved-event preferences
 
-Future machine-learning improvements may include:
+The recommendation system can later be improved using:
 
 Content-based recommendation
 
@@ -565,11 +374,11 @@ User preference profiles
 
 Collaborative filtering
 
-Ranking models
+Machine-learning ranking models
 
-🔒 Security
+Security
 
-Currently Included
+The current project includes:
 
 Password hashing
 
@@ -583,7 +392,7 @@ Input validation
 
 CORS configuration
 
-Recommended for Production
+For production deployment, the following should be added:
 
 HTTPS
 
@@ -595,129 +404,81 @@ Login rate limiting
 
 Account lockout
 
-Password-reset emails
+Password-reset email workflow
 
 Audit logs
 
 Refresh-token rotation
 
-Database migrations
+Production database configuration
 
-Production secret management
+Git Workflow
 
-👥 Team
+Each team member should work on a separate branch.
 
-Role
+Create a branch:
 
-Name
+git switch -c feature/feature-name
 
-Product Owner & Developer
-
-Nai Brahmana Mohan Kumar
-
-Scrum Master & Developer
-
-Deeksith Shankar
-
-Developer
-
-Samba Shiva Rao
-
-Developer
-
-Ahmad Alisha
-
-Developer
-
-Mothadi Venkata Sai Raghu
-
-🌿 Git Workflow
-
-Create a feature branch:
-
-git switch -c feature/your-feature-name
-
-Commit the changes:
+Add and commit changes:
 
 git add .
 git commit -m "Add feature description"
 
 Push the branch:
 
-git push -u origin feature/your-feature-name
+git push -u origin feature/feature-name
 
-Create a pull request and merge it after review.
+Create a pull request on GitHub and merge it only after review.
 
-Avoid deleting files or force-pushing directly to the main branch.
+Avoid deleting files, rewriting history, or force-pushing directly to the main branch.
 
-🗺️ Roadmap
+Future Improvements
 
-Responsive event-discovery interface
+Real machine-learning recommendation model
 
-FastAPI REST backend
+User preference questionnaire
 
-SQLite database integration
+Email verification
 
-Interactive Leaflet map
+Password-reset system
 
-Search and filtering
-
-User registration and login
-
-Administrator authentication
-
-Role-protected dashboards
-
-Saved-event scheduling
-
-Production machine-learning recommendation model
-
-Email verification and password reset
+Google authentication
 
 Event approval workflow
 
-Image-upload system
+Event image upload
 
-Notifications and calendar integration
+Notification system
+
+Calendar integration
 
 Advanced analytics
 
 PostgreSQL production database
 
-Docker and cloud deployment
+Docker deployment
 
-📌 Project Status
+Cloud hosting
 
-Active Development
+Documentation
 
-The application is functional for local development. New features, data sources, security improvements, and recommendation capabilities are being added continuously.
+The source code is organized into clear modules.
 
-🤝 Contributing
+frontend/app.js: Contains event loading, filtering, sorting, map logic, saved schedules, modals, and event creation.
 
-Contributions should be made through feature branches and pull requests.
+frontend/auth.js: Contains user registration and user/administrator login logic.
 
-Before submitting a pull request:
+frontend/dashboard.js: Verifies JWT sessions and protects user and administrator pages.
 
-Test your changes locally.
+backend/app/routers/events.py: Contains event API routes.
 
-Confirm that existing features still work.
+backend/app/routers/auth.py: Contains registration, login, and authenticated-user routes.
 
-Use a meaningful commit message.
+scripts/: Contains Python utilities for inspecting and preparing event datasets.
 
-Describe the changes clearly in the pull request.
+Project Status
 
-Request a review from another team member.
+Local Event Finder is currently under active development.
 
-📄 License
-
-This project is intended for academic and educational use.
-
-A suitable open-source license should be added before public production use.
-
-<div align="center">
-
-Built with passion by the Local Event Finder team
-
-⭐ Star the repository if you find the project useful.
-
-</div>
+The current version includes the event-discovery interface, FastAPI backend, SQLite database, interactive map, user registration, user login, administrator authentication, saved schedules, search, filtering, and event creation.
