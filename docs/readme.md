@@ -1,6 +1,6 @@
-Local Event Finder
+## Local Event Finder
 
-Description:
+# Description:
 
 Local Event Finder is an AI-powered web application that helps users discover nearby events based on their location, interests, categories, and preferences.
 
@@ -8,37 +8,24 @@ The platform supports cultural festivals, music concerts, technology meetups, fo
 
 The project uses a modern Vanilla JavaScript frontend with a FastAPI backend, SQLAlchemy, and SQLite.
 
-Key Features:
+# Key Features:
 
 📍 Location-based event recommendations🤖 Smart and personalized event suggestions🎭 Cultural festivals, concerts, art, food, technology, and community events🔍 Smart search, category filtering, and sorting🗺️ Interactive event map using Leaflet.js📅 Event dates, locations, organizers, and participation details🔖 Save events and create a personal schedule👤 User registration and login🛡️ Separate administrator login and dashboard➕ Create and publish new events🌙 Dark and light theme support📱 Responsive design for desktop, tablet, and mobile🌍 Multi-dataset integration for diverse event coverage
 
-Team
 
-Role
+## 👥 Project Team
 
-Name
+| Role                         | Team Member               |
+|------------------------------|---------------------------|
+| **Product Owner & Developer**| Nai Brahmana Mohan Kumar  |
+| **Scrum Master & Developer** | Deeksith Shankar          |
+| **Developer**                | Samba Shiva Rao           |
+| **Developer**                | Ahmad Alisha              |
+| **Developer**                | Mothadi Venkata Sai Raghu |
 
-Product Owner & Developer
 
-Nai Brahmana Mohan Kumar
 
-Scrum Master & Developer
-
-Deeksith Shankar
-
-Developer
-
-Samba Shiva Rao
-
-Developer
-
-Ahmad Alisha
-
-Developer
-
-Mothadi Venkata Sai Raghu
-
-Project Overview
+# Project Overview
 
 Local Event Finder is a dynamic event-discovery web application designed to help users find, explore, save, and organize local and international events.
 
@@ -46,7 +33,7 @@ The application includes a curated discovery feed, an interactive map finder, ev
 
 The project combines a modern and responsive user interface with a FastAPI REST backend for storing, retrieving, and managing event information.
 
-Architecture
+# Architecture
 
 The application uses a client-server architecture.
 
@@ -68,49 +55,53 @@ SQLite Database
 
 User and administrator authentication is handled using JWT access tokens and securely hashed passwords.
 
-Tech Stack
 
-HTML5: Provides the semantic structure of the application.
+# Tech Stack
 
-CSS3 (Vanilla): Used for responsive layouts, animations, glassmorphism components, Aurora-style colors, and dark/light theme support.
 
-JavaScript (Vanilla JS): Handles search, filtering, sorting, event rendering, authentication, API requests, saved schedules, modals, and interface interactions.
+1.HTML5: Provides the semantic structure of the application.
 
-FastAPI: Provides the backend REST API for events, user registration, user login, administrator login, and protected account information.
+2.CSS3 (Vanilla): Used for responsive layouts, animations, glassmorphism components, Aurora-style colors, and dark/light theme support.
 
-SQLAlchemy: Manages database models, queries, and communication between FastAPI and SQLite.
+3.JavaScript (Vanilla JS): Handles search, filtering, sorting, event rendering, authentication, API requests, saved schedules, modals, and interface interactions.
 
-SQLite: Stores event and user information during local development.
+4.FastAPI: Provides the backend REST API for events, user registration, user login, administrator login, and protected account information.
 
-Pydantic: Validates API requests and responses.
+5.SQLAlchemy: Manages database models, queries, and communication between FastAPI and SQLite.
 
-Leaflet.js: Renders the interactive map and displays event location markers.
+6.SQLite: Stores event and user information during local development.
 
-OpenStreetMap: Provides map tiles for the Leaflet map.
+7.Pydantic: Validates API requests and responses.
 
-JWT Authentication: Protects user and administrator sessions.
+8.Leaflet.js: Renders the interactive map and displays event location markers.
 
-Argon2 Password Hashing: Securely hashes user and administrator passwords.
+9.OpenStreetMap: Provides map tiles for the Leaflet map.
 
-Python: Used for backend development, dataset preparation, inspection, cleaning, and importing event records.
+10.JWT Authentication: Protects user and administrator sessions.
 
-Main Modules
+11.Argon2 Password Hashing: Securely hashes user and administrator passwords.
 
-Discover Feed: Displays featured and recommended events.
+12.Python: Used for backend development, dataset preparation, inspection, cleaning, and importing event records.
 
-Map Finder: Shows events on an interactive map using latitude and longitude.
 
-My Schedule: Stores the events saved by the user.
+# Main Modules
 
-Organize Event: Allows new event information to be submitted to the backend.
+1.Discover Feed: Displays featured and recommended events.
 
-City Assistant: Suggests events using categories, locations, and search terms.
+2.Map Finder: Shows events on an interactive map using latitude and longitude.
 
-User Portal: Provides registration, login, and protected user access.
+3.My Schedule: Stores the events saved by the user.
 
-Admin Portal: Provides role-protected administrator access and management-ready pages.
+4.Organize Event: Allows new event information to be submitted to the backend.
 
-Getting Started
+5.City Assistant: Suggests events using categories, locations, and search terms.
+
+6.User Portal: Provides registration, login, and protected user access.
+
+7.Admin Portal: Provides role-protected administrator access and management-ready pages.
+
+
+# Getting Started:
 
 To run Local Event Finder, you will need:
 
@@ -133,59 +124,59 @@ cd Local-Event-finder
 
 Open the backend folder:
 
-cd backend
+        cd backend
 
 Create a virtual environment:
 
-python -m venv venv
+        python -m venv venv
 
 Activate the virtual environment on Windows:
 
-.\venv\Scripts\Activate.ps1
+        .\venv\Scripts\Activate.ps1
 
 Install the required packages:
 
-python -m pip install -r requirements.txt
+        python -m pip install -r requirements.txt
 
 When the authentication packages are not already included, install them using:
 
-python -m pip install PyJWT "pwdlib[argon2]" email-validator
+        python -m pip install PyJWT "pwdlib[argon2]" email-validator
 
 Start the FastAPI backend:
 
-python -m uvicorn app.main:app --reload --port 8001
+        python -m uvicorn app.main:app --reload --port 8001
 
 Open the API documentation:
 
-http://127.0.0.1:8001/docs
+        http://127.0.0.1:8001/docs
 
 3. Set Up the Frontend
 
 Open another terminal and enter the frontend folder:
 
-cd frontend
+        cd frontend
 
 Start the frontend server:
 
-python -m http.server 5500
+        python -m http.server 5500
 
 Open the application:
 
-http://127.0.0.1:5500
+        http://127.0.0.1:5500
 
 4. Open the Login Pages
 
 User login:
 
-http://127.0.0.1:5500/user-login.html
+        http://127.0.0.1:5500/user-login.html
 
 User registration:
 
-http://127.0.0.1:5500/register.html
+        http://127.0.0.1:5500/register.html
 
 Administrator login:
 
-http://127.0.0.1:5500/admin-login.html
+        http://127.0.0.1:5500/admin-login.html
 
 Create an Administrator Account
 
@@ -270,7 +261,7 @@ GET
 
 Retrieve the authenticated account
 
-Repository Structure
+# Repository Structure
 
 Local-Event-finder/
 ├── frontend/
@@ -316,169 +307,338 @@ Local-Event-finder/
 │
 └── README.md
 
-Dataset Integration
+# Dataset Integration:
 
 The application can use multiple event datasets containing:
 
-Event title
+# 📋 Event Dataset Structure
 
-Event description
+The Local Event Finder application stores event information in a structured format to ensure accurate searching, filtering, and recommendation of local events.
 
-Category
+| Field | Description |
+|-------|-------------|
+| **Event Title** | The official name of the event displayed to users. |
+| **Event Description** | A detailed overview of the event, including its purpose, activities, and highlights. |
+| **Category** | The type of event (e.g., Music, Sports, Festival, Technology, Business, Cultural, Community). |
+| **Start Date & Time** | The scheduled starting date and time of the event. |
+| **End Date & Time** | The scheduled ending date and time of the event. |
+| **City** | The city where the event is taking place. |
+| **Venue** | The exact location or venue where the event will be hosted. |
+| **Latitude & Longitude** | Geographic coordinates used for map visualization and location-based recommendations. |
+| **Organizer** | The organization or individual responsible for hosting the event. |
+| **Event Image** | A representative image or banner displayed for the event. |
+| **Source URL** | The original website or source from which the event information was collected. |
+| **Participation Guidelines** | Instructions, eligibility requirements, ticket information, dress code, or rules for attendees. |
 
-Start and end dates
+---
 
-City
+# 🛠️ Data Processing Scripts
 
-Venue
+The project contains a dedicated **`scripts/`** folder that includes Python utilities for preparing and managing event datasets.
 
-Latitude and longitude
+These scripts can be used to:
 
-Organizer
+- Inspect raw event datasets
+- Clean duplicate or incomplete records
+- Standardize event information
+- Transform datasets into a consistent format
+- Import processed data into the application's database
+- Validate data quality before deployment
 
-Event image
+This automated preprocessing pipeline ensures that the application always works with accurate and structured event information.
 
-Source URL
+---
 
-Participation guidelines
+# 🤖 Smart Recommendation System
 
-Python scripts inside the scripts folder can be used to inspect, clean, transform, and import event information.
+The Local Event Finder includes an intelligent recommendation system that suggests relevant events based on user preferences.
 
-Smart Recommendation Approach
+## Current Recommendation Features
 
-The current application can provide event suggestions using:
+The application currently recommends events using:
 
-Search keywords
+- 🔍 Search keywords entered by the user
+- 📂 Selected event categories
+- 📍 User's current location
+- 🏙️ Event city
+- 📅 Event date
+- 📝 Event description
+- ❤️ Previously saved or bookmarked events
 
-Selected categories
+These recommendation techniques help users quickly discover events that match their interests.
 
-User location
+---
 
-Event city
+## Future AI Recommendation Enhancements
 
-Event date
+To improve personalization, the recommendation engine can be extended using Artificial Intelligence and Machine Learning techniques such as:
 
-Event description
+### Content-Based Recommendation
+Recommends events with similar characteristics based on event descriptions, categories, locations, and user interests.
 
-Saved-event preferences
+### Event Classification
+Automatically classifies events into predefined categories using Natural Language Processing (NLP).
 
-The recommendation system can later be improved using:
+### Similarity Scoring
+Calculates similarity between events using text embeddings and feature matching to recommend closely related events.
 
-Content-based recommendation
+### User Preference Profiles
+Builds personalized user profiles based on browsing history, saved events, attendance history, and search behavior.
 
-Event classification
+### Collaborative Filtering
+Suggests events by identifying users with similar interests and recommending events they have attended or saved.
 
-Similarity scoring
+### Machine Learning Ranking Models
+Uses machine learning algorithms to rank events according to relevance, popularity, user preferences, location, and historical interactions.
 
-User preference profiles
+---
 
-Collaborative filtering
+# 🔒 Security Features
 
-Machine-learning ranking models
+The application follows modern web security practices to protect user accounts and sensitive information.
 
-Security
+## Current Security Implementation
 
-The current project includes:
+The project currently includes:
 
-Password hashing
+- 🔐 Password Hashing for secure password storage
+- 🎫 JWT (JSON Web Token) Authentication
+- 👤 Role-Based Access Control (User & Administrator)
+- 🛡️ Protected Dashboard Pages
+- ✅ Input Validation to prevent invalid or malicious input
+- 🌐 CORS (Cross-Origin Resource Sharing) Configuration
 
-JWT authentication
+---
 
-User and administrator roles
+## Recommended Security Enhancements for Production
 
-Protected dashboard pages
+Before deploying the application in a production environment, the following security measures should be implemented:
 
-Input validation
+### HTTPS Encryption
+Encrypts all communication between users and the server.
 
-CORS configuration
+### Secure HttpOnly Cookies
+Protects authentication tokens from client-side JavaScript attacks.
 
-For production deployment, the following should be added:
+### CSRF Protection
+Prevents unauthorized cross-site request forgery attacks.
 
-HTTPS
+### Login Rate Limiting
+Limits repeated login attempts to reduce brute-force attacks.
 
-Secure HttpOnly cookies
+### Account Lockout
+Temporarily locks accounts after multiple failed login attempts.
 
-CSRF protection
+### Password Reset Workflow
+Provides secure password recovery through verified email links.
 
-Login rate limiting
+### Audit Logs
+Maintains records of user activities for monitoring and security analysis.
 
-Account lockout
+### Refresh Token Rotation
+Improves session security by periodically renewing authentication tokens.
 
-Password-reset email workflow
+### Production Database Configuration
+Implements secure database credentials, backups, encryption, monitoring, and restricted access for production environments.
 
-Audit logs
+---
 
-Refresh-token rotation
+# 🌿 Git Workflow
 
-Production database configuration
+To ensure smooth collaboration and maintain code quality, the team follows a structured Git workflow.
 
-Git Workflow
+## Branching Strategy
 
-Each team member should work on a separate branch.
+Each team member works on a dedicated feature branch instead of directly modifying the main branch.
 
-Create a branch:
+### Workflow
 
-git switch -c feature/feature-name
+1. Create a new branch for your assigned feature.
+2. Develop and test your changes locally.
+3. Commit changes with meaningful commit messages.
+4. Push the branch to the remote repository.
+5. Create a Pull Request (PR).
+6. Conduct code review and resolve feedback.
+7. Merge the approved branch into the main branch.
 
-Add and commit changes:
+### Benefits
 
-git add .
-git commit -m "Add feature description"
+- Prevents merge conflicts
+- Enables parallel development
+- Simplifies code reviews
+- Maintains project stability
+- Provides version history and rollback capability
+- Encourages collaborative software development following Agile practices
 
-Push the branch:
+# 🚀 Future Improvements
 
-git push -u origin feature/feature-name
+The Local Event Finder project is designed to be scalable and continuously enhanced with advanced features. Planned future improvements include:
 
-Create a pull request on GitHub and merge it only after review.
+| Feature | Description |
+|---------|-------------|
+| **AI-Powered Recommendation Engine** | Implement machine learning algorithms to provide highly personalized event recommendations based on user interests and behavior. |
+| **User Preference Questionnaire** | Allow users to select their interests during registration to improve recommendation accuracy. |
+| **Email Verification** | Verify user email addresses during account registration to improve security and prevent fake accounts. |
+| **Password Reset System** | Enable secure password recovery through email-based reset links. |
+| **Google Authentication** | Allow users to register and log in using their Google accounts through OAuth authentication. |
+| **Event Approval Workflow** | Introduce an administrator approval process before newly created events become publicly visible. |
+| **Event Image Upload** | Allow organizers to upload custom event images instead of using predefined images. |
+| **Notification System** | Send notifications for upcoming events, reminders, new recommendations, and event updates. |
+| **Calendar Integration** | Allow users to add events directly to Google Calendar, Outlook, or Apple Calendar. |
+| **Advanced Analytics Dashboard** | Provide administrators with detailed insights into user activity, event popularity, registrations, and platform usage. |
+| **PostgreSQL Production Database** | Replace SQLite with PostgreSQL for improved scalability, reliability, and production deployment. |
+| **Docker Deployment** | Containerize both frontend and backend services for consistent development and deployment environments. |
+| **Cloud Hosting** | Deploy the application to cloud platforms such as AWS, Microsoft Azure, or Google Cloud Platform for high availability and scalability. |
 
-Avoid deleting files, rewriting history, or force-pushing directly to the main branch.
+---
 
-Future Improvements
+# 📚 Documentation
 
-Real machine-learning recommendation model
+The project follows a modular architecture to improve readability, maintainability, and scalability. Each component has a dedicated responsibility within the application.
 
-User preference questionnaire
+## Frontend Modules
 
-Email verification
+### 📄 `frontend/app.js`
+Responsible for the core functionality of the user interface, including:
 
-Password-reset system
+- Loading event data
+- Event searching and filtering
+- Sorting events
+- Interactive map integration
+- Saved schedules and bookmarks
+- Modal windows
+- Event creation interface
+- User interaction logic
 
-Google authentication
+---
 
-Event approval workflow
+### 🔐 `frontend/auth.js`
 
-Event image upload
+Handles user authentication features, including:
 
-Notification system
+- User registration
+- User login
+- Administrator login
+- Authentication validation
+- JWT token storage
 
-Calendar integration
+---
 
-Advanced analytics
+### 🛡️ `frontend/dashboard.js`
 
-PostgreSQL production database
+Manages protected dashboard functionality by:
 
-Docker deployment
+- Verifying JWT authentication tokens
+- Restricting unauthorized access
+- Displaying user dashboard
+- Displaying administrator dashboard
+- Managing authenticated sessions
 
-Cloud hosting
+---
 
-Documentation
+## Backend Modules
 
-The source code is organized into clear modules.
+### ⚙️ `backend/app/routers/events.py`
 
-frontend/app.js: Contains event loading, filtering, sorting, map logic, saved schedules, modals, and event creation.
+Implements all event-related API endpoints, including:
 
-frontend/auth.js: Contains user registration and user/administrator login logic.
+- Retrieve events
+- Create new events
+- Update existing events
+- Delete events
+- Search and filter events
+- Event management services
 
-frontend/dashboard.js: Verifies JWT sessions and protects user and administrator pages.
+---
 
-backend/app/routers/events.py: Contains event API routes.
+### 🔑 `backend/app/routers/auth.py`
 
-backend/app/routers/auth.py: Contains registration, login, and authenticated-user routes.
+Provides authentication services, including:
 
-scripts/: Contains Python utilities for inspecting and preparing event datasets.
+- User registration
+- User login
+- Administrator authentication
+- JWT token generation
+- Authenticated user endpoints
+- Session validation
 
-Project Status
+---
 
-Local Event Finder is currently under active development.
+## Data Processing
 
-The current version includes the event-discovery interface, FastAPI backend, SQLite database, interactive map, user registration, user login, administrator authentication, saved schedules, search, filtering, and event creation.
+### 🐍 `scripts/`
+
+Contains Python utilities used for data preparation and maintenance.
+
+These scripts are responsible for:
+
+- Inspecting raw event datasets
+- Cleaning incomplete or duplicate records
+- Transforming datasets into a standardized format
+- Importing processed event data
+- Validating data quality
+- Preparing datasets for machine learning models
+
+---
+
+# 📌 Project Status
+
+## Current Development Status
+
+**Local Event Finder** is currently under **active development** and continues to evolve with new features and improvements.
+
+### ✅ Current Features
+
+The current version includes:
+
+- 🌍 Interactive event discovery interface
+- ⚡ FastAPI backend architecture
+- 🗄️ SQLite database integration
+- 🗺️ Interactive map visualization
+- 👤 User registration
+- 🔐 Secure user login
+- 👨‍💼 Administrator authentication
+- ❤️ Saved events and personal schedules
+- 🔍 Event search functionality
+- 🎯 Category-based filtering
+- ➕ Event creation system
+- 📱 Responsive user interface
+- 🔒 JWT-based authentication
+- 🛡️ Role-based access control
+
+---
+
+## 🔮 Roadmap
+
+### Phase 1 (Completed)
+
+- Event browsing
+- User authentication
+- Interactive maps
+- Event management
+- Basic recommendation system
+
+### Phase 2 (In Progress)
+
+- Improved event recommendations
+- User personalization
+- Better dashboard analytics
+- Enhanced administrator tools
+
+### Phase 3 (Planned)
+
+- AI-powered recommendation engine
+- Cloud deployment
+- Docker containerization
+- PostgreSQL migration
+- Real-time notifications
+- Calendar integration
+- Mobile application support
+
+---
+
+# 🎯 Project Vision
+
+Our vision is to build an intelligent, AI-powered event discovery platform that enables users to effortlessly find personalized local events while providing organizers with powerful tools to manage, promote, and analyze their events.
+
+By combining **Artificial Intelligence, geolocation services, recommendation systems, and modern web technologies**, Local Event Finder aims to become a scalable, user-centric platform for discovering and managing events across different cities and communities.
