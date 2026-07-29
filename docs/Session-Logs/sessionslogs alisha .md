@@ -3,13 +3,13 @@
 ---
 
 # # 📅 28 APRIL 2026**
-## ** MOHAN KUMAR**
+## ** AHMAD ALISHA**
 - Created a GitHub account and repository.
 
 ---
 
 # # 📅 30 APRIL 2026 (THURSDAY)**
-## ** MOHAN KUMAR**
+## ** AHMAD ALISHA **
 - Worked with GitHub branches.
 - Added the project to the repository.
 - Added team members to the project.
@@ -19,7 +19,7 @@
 ---
 
 # # 📅 05 MAY 2026**
-## ** MOHAN KUMAR**
+## ** AHMAD ALISHA **
 - Updated the project name.
 - Worked on personas.
 - Worked on scenarios.
