@@ -1,87 +1,254 @@
-# Project Progress Log
+# # #  PROJECT PROGRESS REPORT**
 
-## 28th April 2026  
-I have created a GitHub account.
+---
 
-## 30th April 2026  
-Done with branches and clone the project in Antigravity.
+# # 📅 28 APRIL 2026**
+## ** MOHAN KUMAR**
+- Created a GitHub account and repository.
 
-## 5th May 2026  
-**Bonkuri Venkata Sambasiva Rao**  
-I have created a file named as `scenarios`. In that, I have written one scenario for part 2 and I have done changes. This includes objective, actors, activities, problem, and resolution.
+---
 
-## 7th May 2026  
-Our group has explained our project theme to other teams, and they also explained their project to our group. We have shared our ideas, got some good feedback, and clarified doubts too.
+# # 📅 30 APRIL 2026 (THURSDAY)**
+## ** MOHAN KUMAR**
+- Worked with GitHub branches.
+- Added the project to the repository.
+- Added team members to the project.
+- Learned and worked on GitHub pull requests.
+- Updated the GitHub repository.
 
-## Q: Which concept defines the web business?
-Answer: The concept of value exchange defines the web business. A website must provide clear value to users—whether through information, entertainment, or utility—in return for their time, attention, or data.
+---
 
-## Q: What is one assumption about your users that this workshop forced you to challenge?
-Answer: I assumed users would explore the website thoroughly and read all instructions. This workshop made me realize that most users skim and expect intuitive design without needing guidance, so clarity and simplicity are more important than detailed explanations.
+# # 📅 05 MAY 2026**
+## ** MOHAN KUMAR**
+- Updated the project name.
+- Worked on personas.
+- Worked on scenarios.
+- Updated the `scenarios.md` file in GitHub.
+- Reviewed pull requests.
+- Discussed the three project parts with team members.
 
-#  12 may 2026
-Installed VM Virtualbox
-Installed a Linux Operating System
+---
+# # #  📅 07 may  2026
 
-#  19 may 2026
-Configured SSH ,FTP,and SCP.
-Installed the Web server.
-Deployed a static website.
+# # # **📝 REFLECTION**
 
-#  21 may 2026
-Installed Docker and Docker Compose.
-Created a Docker webserver project.
-Added an HTML webpage.
-Ran nginx using Docker.
-Created docker-compose.yml.
-Started services using Docker Compose.
-Verified containers and logs.
-Tested website on localhost.
-Stopped services using Compose.
-Uploaded project to GitHub.
-Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:49 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:52 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:33:52 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:39:50 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:40:12 +0000] "GET / HTTP/1.1" 200 186 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:40:48 +0000] "GET / HTTP/1.1" 200 191 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:48 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:52 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:53 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:54 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:50:54 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-" 172.18.0.1 - - [21/May/2026:17:51:26 +0000] "GET / HTTP/1.1" 200 199 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
+# # **❓ WHICH CONCEPT (PERSONAS / SCENARIOS / USER STORIES / FEATURES) WAS MOST USEFUL FOR YOUR PROJECT, AND WHY?**
 
-# #  26 may 2026
-Project presentation and live demo and providing the berlif explanation on the project to the class and answering the questions and getting the feed back and updating the features and managing to achive the some of the features such as
-1.Brightness of the websites application (Dark and light mode)
-Managing to the add the location and world map to the websites and make easy access to the users
+## ** ANSWER**
+Personas were the most useful concept for our project because they helped us imagine different types of users and understand their expectations. This made it easier to design features for the Local Event Finder application that are more user-friendly and suitable for different user needs.
 
-# #  28 may 2026
-Worked with the Task managment project .
-Created the files structure and worked with the understanding of the code .
-Sucessfully getting the output on backend and trying to resolve the front end issue
-Trying to understand the working of files requirements.txt ,docker-compose.yml ,task-services , App.jsx
+---
 
-# #  2 june 2026
-Worked with the Task managment project .
-Worked on front end errors and codes .
-Learning the responsibility of each files .
-Created the fronted codes files and managed to get the both front and backend outputs .
-Attending the Quiz related to the project and scoring around 68.9 %
-# #  4 june 2026
+# # **❓ WHAT IS ONE ASSUMPTION ABOUT YOUR USERS THAT THIS WORKSHOP FORCED YOU TO CHALLENGE?**
 
-Worked with the Task managment project .
-Worked on front end errors and codes .
-Learning the responsibility of each files .
-Created the fronted codes files and managed to get the both front and backend outputs .
-Attending the Quiz related to the project and scoring around 68.9 %
+## ** ANSWER**
+Before this workshop, we believed users mainly cared about finding the most popular events. After discussing personas and scenarios, we understood that many users actually value convenience, personalized recommendations, and easy access to event details more than popularity itself.
 
-# #  11 june 2026
-Working on the excise 2.
-Working on the task.services ,
-Learning the debuging
+# # # **🔄 PROJECT SWAPPING DISCUSSION**
 
-# #  16 june 2026
-Worked with the ORM files .
-Worked on backend code and manage to debug the errors .
-Learning the responsibility of each files .
-Created the backend output and completed the excises 2 .
-Acctivately worked to resolve the errors on the backend .
+---
 
-# #  18 june 2026
-Worked with the Migration files .
-Worked on Excises 3 and problem solving .
-Manage to get the output for the 3 excises on ORM files excution .
-Created the Vision and Alembic files using the Docker compose commands and sucessfully executed .
-Activately workeing on the front end error resolving .
-Sucessfully got the output of the excises 4 on migration of data .
+# # **🤝 DISCUSSION WITH GROUP C**
+## **🌱 GO ECHO**
+- Discussed the project ideas with Group C.
+- Their project, **"GO ECHO"**, focused on environmental awareness and sustainability.
+- The idea was highly innovative and aimed at creating a positive impact on the environment.
+
+---
+
+# # **🤖 DISCUSSION WITH GROUP D**
+## **👗 AI BASED FASHION**
+- Discussed the project ideas with Group D.
+- Their project, **"AI Based Fashion"**, introduced a smart fashion recommendation concept.
+- The project focused on helping people improve their fashion sense using AI technology.
+- The idea was creative, modern, and user-friendly.
+
+# # #  📅 12 may  2026
+- Installed  VM Virtualbox
+- Installed a Linux Operating System
+
+# # #  📅 19 may  2026
+- Configured SSH ,FTP,and SCP.
+- Installed the Web server.
+- Deployed a static website.
+
+# # #  📅 21 may  2026
+
+1. Installed Docker and Docker Compose.
+2. Created a Docker webserver project.
+3. Added an HTML webpage.
+4. Ran nginx using Docker.
+5. Created docker-compose.yml.
+6. Started services using Docker Compose.
+7. Verified containers and logs.
+8. Tested website on localhost.
+9. Stopped services using Compose.
+10. Uploaded project to GitHub.
+
+<h3># # 📅 23 may 2026</h3>
+172.17.0.1 - - [21/May/2026:17:30:29 +0000] "GET / HTTP/1.1" 200 377 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
+172.17.0.1 - - [21/May/2026:17:38:46 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
+172.17.0.1 - - [21/May/2026:18:04:13 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
+172.17.0.1 - - [21/May/2026:18:10:57 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" "-"
+
+
+    
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+<li>Worked with the project interface and selecting on programming language .</li>
+<li>Working with features and adding the AI travel agent .</li>
+<li>Worked with the Server update and domain name </li>
+<li>Interface look and the user based persona wokring .</li>
+
+
+</ul>
+
+<h3># # 📅 26 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+
+<li>Project presentation and live demo and providing the berlif explanation on the project to the class and answering the questions and getting the feed back and updating the features and managing to achive the some of the features such as </li> <li>1.Brightness of the websites application (Dark and light mode)</li>
+<li>Managing to the add the location and world  map to the websites and make easy access to the users </li>
+ 
+</ul>
+
+<h3># # 📅 28 may 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+
+<li>Worked with the Task managment project  .</li>
+<li>Created the files structure and worked with the understanding of the code  .</li>
+<li>Sucessfully getting the output on backend and trying to resolve the front end issue </li>
+<li>Trying to understand the working of files requirements.txt ,docker-compose.yml ,task-services , App.jsx </li>
+
+
+
+</ul>
+
+
+<h3># # 📅 2 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+
+<ul>
+<li>Worked with the Task managment project  .</li>
+<li>Worked on front end errors and codes  .</li>
+<li>Learning the responsibility of each files . </li>
+<li>Created the fronted codes files and managed to get the both front and backend outputs . </li>
+<li>Attending the Quiz related to the project and scoring around 68.9 %  </li>
+
+
+</ul>
+
+<h3># # 📅 4 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Task managment project  .</li>
+<li>Worked on front end errors and codes  .</li>
+<li>Learning the responsibility of each files . </li>
+<li>Created the fronted codes files and managed to get the both front and backend outputs . </li>
+<li>Attending the Quiz related to the project and scoring around 68.9 %  </li>
+</ul>
+
+<h3># # 📅 11 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Working on the excise 2.</li>
+<li>Working on the task.services , </li>
+<li>Learning the debuging </li>
+
+</ul>
+
+<h3># # 📅 16 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the ORM files   .</li>
+<li>Worked on backend code and manage to debug the errors .</li>
+<li>Learning the responsibility of each files . </li>
+
+<li>Created the backend output and completed the excises 2 . </li>
+<li>Acctivately worked to resolve the errors on the backend . </li>
+</ul>
+
+<h3># # 📅 18 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Migration files   .</li>
+<li>Worked on Excises 3 and problem solving .</li>
+<li>Manage to get the output for the 3 excises on ORM files excution . </li>
+<li>Created the Vision and Alembic files using the Docker compose commands and sucessfully executed . </li>
+<li>Activately workeing on the front end error resolving . </li>
+ <li>Sucessfully got the output of the excises 4 on migration of data .
+ <h3># # 📅 23 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Migration files   .</li>
+<li>Worked on Excises 4 and problem solving .</li>
+<li>Manage to get the output for the 4 excises on ORM files excution . </li>
+<li>Activately workeing on the front end error resolving . </li>
+ <li>Sucessfully got the output  on migration of data . </li>
+</ul>
+
+
+<h3># # 📅 25 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the JWT library   .</li>
+<li>Worked on Excises 1-& 2 and problem solving .</li>
+<li>Manage to get the output for the 1 & 2 excises on JWT files excution . </li>
+<li>User login and token generation and password convertion into Hash  </li>
+ <li>Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors  </li>
+</ul>
+
+<h3># # 📅 30 june 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the JWT library   .</li>
+<li>Worked on Excises 3 & 4 and problem solving .</li>
+<li>Manage to get the output for the 3 & 4 excises on JWT files excution . </li>
+<li>Loin of the user replacing of the owner_id  variable to user  </li>
+ <li>Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors  </li>
+<li>Manage to generate the indivisual user task managing front end with user and password login and   </li>
+ <li>Manage to get the indivisual task managing , creating , deleting , adding users etc  </li>
+ <li>New front end for the indivisual logins   </li>
+</ul>
+
+<h3># # 📅 2 july 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the JWT library   .</li>
+<li>Worked on token validation from the website login </li>
+<li> </li>
+<li>User login and token generation and password convertion into Hash  </li>
+ <li>Manage to work with the back end login sucessfull and try to chekc the other output for incorrect login as 402 ,401 errors  </li>
+</ul>
+
+<h3># # 📅 7 july 2026</h3>
+
+<hr style="width:50%; height:3px; background-color:purple; border:none;">
+<ul>
+<li>Worked with the Auntication excises   .</li>
+<li>Started createing the tasks where alice can not delete the bobs task  </li>
+<li> Auntication of the logins and the taks of 2 users to be completely secure . </li>
+<li>Completely was able to get the tokens passed from all the 4 excises and was able to debus the excises  </li>
+ 
+</ul>
+
+
+
+</body>
+</html>
+
