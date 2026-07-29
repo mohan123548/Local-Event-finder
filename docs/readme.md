@@ -178,88 +178,75 @@ Administrator login:
 
         http://127.0.0.1:5500/admin-login.html
 
-Create an Administrator Account
+# Create an Administrator Account
 
-Run the following command from the backend folder:
+# 👨‍💼 Create Administrator Account
 
+After setting up the backend and database, create the initial administrator account by running the following command from the **backend** directory:
+
+```powershell
 .\venv\Scripts\python.exe -m app.create_admin `
   --name "Administrator" `
   --email "admin@example.com" `
   --password "ChangeThis123!"
 
-Use a strong password and do not upload real administrator credentials to GitHub.
+# 🔗 API Documentation
 
-API Endpoints
+The Local Event Finder backend provides a RESTful API developed using FastAPI. The API is organized into two main categories:
 
-Event Endpoints
+Event Management APIs
+Authentication APIs
 
-Method
+# 📅 Event Endpoints
 
-Endpoint
+These endpoints allow users and administrators to retrieve and manage event information.
 
-Description
+| Method     | Endpoint                 | Description                                                             |
+| ---------- | ------------------------ | ----------------------------------------------------------------------- |
+| **GET**    | `/api/events`            | Retrieve all available events from the database.                        |
+| **POST**   | `/api/events`            | Create and store a new event.                                           |
+| **GET**    | `/api/events/{event_id}` | Retrieve detailed information for a specific event using its unique ID. |
+| **PUT**    | `/api/events/{event_id}` | Update the details of an existing event.                                |
+| **DELETE** | `/api/events/{event_id}` | Permanently remove an event from the database.                          |
 
-GET
 
-/api/events
+# 🔐 Authentication Endpoints
 
-Retrieve all events
+These endpoints manage user registration, authentication, and authorization.
 
-POST
+| Method   | Endpoint                | Description                                                                   |
+| -------- | ----------------------- | ----------------------------------------------------------------------------- |
+| **POST** | `/api/auth/register`    | Register a new user account.                                                  |
+| **POST** | `/api/auth/user-login`  | Authenticate and sign in as a registered user.                                |
+| **POST** | `/api/auth/admin-login` | Authenticate and sign in as an administrator.                                 |
+| **GET**  | `/api/auth/me`          | Retrieve information about the currently authenticated user or administrator. |
 
-/api/events
 
-Create a new event
+# 🔄 API Workflow
 
-GET
+The typical application workflow is as follows:
 
-/api/events/{event_id}
+User Registration
+        │
+        ▼
+User Login
+        │
+        ▼
+JWT Token Generated
+        │
+        ▼
+Authenticated Requests
+        │
+        ▼
+Search & Browse Events
+        │
+        ▼
+Save Favourite Events
+        │
+        ▼
+Create / Update Events (Admin)
 
-Retrieve one event
 
-PUT
-
-/api/events/{event_id}
-
-Update an event
-
-DELETE
-
-/api/events/{event_id}
-
-Delete an event
-
-Authentication Endpoints
-
-Method
-
-Endpoint
-
-Description
-
-POST
-
-/api/auth/register
-
-Register a new user
-
-POST
-
-/api/auth/user-login
-
-Sign in as a user
-
-POST
-
-/api/auth/admin-login
-
-Sign in as an administrator
-
-GET
-
-/api/auth/me
-
-Retrieve the authenticated account
 
 # Repository Structure
 
