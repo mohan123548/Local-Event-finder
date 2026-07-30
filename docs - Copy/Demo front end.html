@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LOCAL EVENT FINDER | Pro Hub + Blogs & Uploads</title>
+  <!-- Google Fonts: Plus Jakarta Sans + Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      background-color: #05070a;
+      color: #eef2ff;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* premium glass + dark theme */
+    .glass-panel {
+      background: rgba(15, 23, 36, 0.65);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 2rem;
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #11161f;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e11d48;
+      border-radius: 10px;
+    }
+
+    .app-container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 32px 48px 32px;
+    }
+
+    /* navbar */
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0 24px 0;
+      gap: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 32px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-icon {
+      background: linear-gradient(145deg, #e11d48, #9f1239);
+      width: 48px;
+      height: 48px;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 24px -8px rgba(225, 29, 72, 0.4);
+    }
+    .logo-icon i {
+      font-size: 26px;
+      color: white;
+    }
+    .logo-text h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #ffffff, #cbd5e6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo-text span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #e11d48;
+      color: white;
+      padding: 3px 12px;
+      border-radius: 40px;
+      margin-left: 10px;
+    }
+
+    /* tab navigation (events / blogs / upload) */
+    .tabs-container {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 12px;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #9aa9c1;
+      cursor: pointer;
+      border-radius: 60px;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .tab-btn i {
+      font-size: 1.2rem;
+    }
+    .tab-btn.active {
+      background: #e11d48;
+      color: white;
+      box-shadow: 0 8px 20px rgba(225,29,72,0.3);
+    }
+    .tab-btn:hover:not(.active) {
+      background: rgba(225,29,72,0.2);
+      color: white;
+    }
+
+    /* panels */
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .tab-panel.active-panel {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    /* events grid (keep existing premium look) */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 32px;
+    }
+    .concert-card {
+      background: rgba(12, 18, 28, 0.8);
+      backdrop-filter: blur(2px);
+      border-radius: 32px;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      border: 1px solid rgba(255,255,255,0.05);
+      cursor: pointer;
+    }
+    .concert-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      border-color: rgba(225,29,72,0.5);
+    }
+    .card-img {
+      height: 210px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .card-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(12px);
+      padding: 6px 16px;
+      border-radius: 60px;
+      font-weight: 700;
+    }
+    .card-content { padding: 22px 24px 26px; }
+    .artist-name { font-size: 1.6rem; font-weight: 800; display: flex; justify-content: space-between; }
+    .genre-tag { font-size: 0.7rem; background: rgba(225,29,72,0.2); padding: 4px 12px; border-radius: 40px; color: #ff99b4; }
+    .venue-info { margin: 14px 0 10px; display: flex; gap: 12px; color: #a5b4d0; }
+    .date-actions { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+    .rsvp-btn { background: linear-gradient(120deg, #e11d48, #9f1239); border: none; padding: 9px 24px; border-radius: 40px; font-weight: 700; color: white; cursor: pointer; }
+
+    /* ----- BLOG SECTION (PRO) ----- */
+    .blog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .create-post-btn {
+      background: linear-gradient(95deg, #e11d48, #a21c3e);
+      border: none;
+      padding: 12px 28px;
+      border-radius: 80px;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: 0.2s;
+    }
+    .blogs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+    .blog-card {
+      background: rgba(18, 25, 40, 0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.05);
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .blog-card:hover {
+      border-color: #e11d48;
+      transform: translateY(-4px);
+    }
+    .blog-img {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      background-color: #1e2a3a;
+    }
+    .blog-content { padding: 22px; }
+    .blog-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+    .blog-meta { display: flex; gap: 16px; font-size: 0.7rem; color: #94a3b8; margin-bottom: 12px; }
+    .blog-excerpt { color: #cbd5e6; font-size: 0.85rem; line-height: 1.4; margin-bottom: 18px; }
+    .read-more { color: #e11d48; font-weight: 600; text-decoration: none; font-size: 0.8rem; }
+
+    /* MODAL (create blog / upload) */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.2s;
+    }
+    .modal-overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .modal-content {
+      background: #0f172ad9;
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 48px;
+      width: 90%;
+      max-width: 560px;
+      padding: 32px;
+      color: white;
+    }
+    .modal-content h3 { font-size: 1.8rem; margin-bottom: 24px; }
+    .modal-content input, .modal-content textarea {
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      border: 1px solid #334155;
+      border-radius: 28px;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      color: white;
+      font-family: inherit;
+      outline: none;
+    }
+    .modal-content input:focus, .modal-content textarea:focus { border-color: #e11d48; }
+    .modal-actions { display: flex; gap: 16px; justify-content: flex-end; margin-top: 12px; }
+    .modal-btn { padding: 10px 24px; border-radius: 40px; border: none; font-weight: 600; cursor: pointer; }
+    .btn-primary { background: #e11d48; color: white; }
+    .btn-secondary { background: #334155; color: white; }
+
+    /* upload media section */
+    .upload-area {
+      background: rgba(15, 23, 36, 0.6);
+      border-radius: 32px;
+      padding: 32px;
+      text-align: center;
+      border: 2px dashed rgba(225,29,72,0.4);
+      margin-bottom: 32px;
+    }
+    .media-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .media-item {
+      background: #0f172a;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid #2d3a5e;
+    }
+    .media-item img, .media-item video {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .media-info { padding: 12px; font-size: 0.7rem; display: flex; justify-content: space-between; }
+
+    /* footer */
+    .footer {
+      margin-top: 70px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: space-between;
+      color: #6c7a94;
+    }
+    @media (max-width: 780px) {
+      .app-container { padding: 0 20px 32px; }
+      .navbar { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+<div class="app-container">
+  <!-- navbar -->
+  <div class="navbar">
+    <div class="logo-area">
+      <div class="logo-icon"><i class="fas fa-compass"></i></div>
+      <div class="logo-text">
+        <h1>LOCAL EVENT FINDER <span>PRO+</span></h1>
+      </div>
+    </div>
+    <div class="search-bar" style="flex:1; max-width:460px; background:rgba(18,25,40,0.9); border-radius:80px; display:flex; align-items:center; padding:0 8px;">
+      <i class="fas fa-search" style="margin-left:16px; color:#94a3b8;"></i>
+      <input type="text" id="globalSearchInput" placeholder="Search events, blogs..." style="background:transparent; border:none; padding:14px; color:white; flex:1; outline:none;">
+    </div>
+    <div class="nav-actions" style="display:flex; gap:20px;">
+      <i class="far fa-heart"></i>
+      <i class="far fa-bookmark"></i>
+      <div class="avatar" style="width:44px;height:44px;border-radius:50%;background:#e11d48; background-image:url('https://ui-avatars.com/api/?background=e11d48&color=fff&name=Creator'); background-size:cover;"></div>
+    </div>
+  </div>
+
+  <!-- TABS: Events | Blog | Uploads -->
+  <div class="tabs-container">
+    <button class="tab-btn active" data-tab="events"><i class="fas fa-calendar-alt"></i> Live Events</button>
+    <button class="tab-btn" data-tab="blogs"><i class="fas fa-newspaper"></i> Music Blog</button>
+    <button class="tab-btn" data-tab="uploads"><i class="fas fa-cloud-upload-alt"></i> Media Hub</button>
+  </div>
+
+  <!-- EVENTS PANEL (original pro) -->
+  <div id="eventsPanel" class="tab-panel active-panel">
+    <div class="filters-row" style="display:flex; justify-content:space-between; margin-bottom:32px; flex-wrap:wrap;">
+      <div class="filter-chips" id="filterChips" style="display:flex; gap:12px;">
+        <div class="chip active" data-filter="all">All events</div>
+        <div class="chip" data-filter="rock">Rock</div>
+        <div class="chip" data-filter="electronic">Electronic</div>
+        <div class="chip" data-filter="indie">Indie</div>
+        <div class="chip" data-filter="jazz">Jazz</div>
+      </div>
+      <div class="view-options">
+        <div class="view-btn active" data-view="grid"><i class="fas fa-th"></i> Grid</div>
+        <div class="view-btn" data-view="list"><i class="fas fa-list-ul"></i> List</div>
+      </div>
+    </div>
+    <div id="eventsContainer" class="events-grid"></div>
+  </div>
+
+  <!-- BLOG PANEL -->
+  <div id="blogsPanel" class="tab-panel">
+    <div class="blog-header">
+      <h2><i class="fas fa-pen-fancy"></i> Latest Stories & Reviews</h2>
+      <button id="createBlogBtn" class="create-post-btn"><i class="fas fa-plus-circle"></i> Write article</button>
+    </div>
+    <div id="blogsContainer" class="blogs-grid">
+      <!-- dynamic blogs -->
+    </div>
+  </div>
+
+  <!-- UPLOAD PANEL (images/videos) -->
+  <div id="uploadsPanel" class="tab-panel">
+    <div class="upload-area" id="dropZone">
+      <i class="fas fa-cloud-upload-alt" style="font-size: 48px; color: #e11d48; margin-bottom: 16px; display: block;"></i>
+      <h3>Drag & drop media</h3>
+      <p style="margin: 12px 0;">Support: JPG, PNG, GIF, MP4 (max 10MB each)</p>
+      <input type="file" id="fileInput" accept="image/*,video/*" multiple style="display:none;">
+      <button id="selectFilesBtn" class="create-post-btn" style="background:#1e293b;"><i class="fas fa-folder-open"></i> Browse files</button>
+    </div>
+    <div id="mediaGallery" class="media-gallery">
+      <!-- uploaded items appear here -->
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>© 2025 LOCAL EVENT FINDER — Creator suite + blogs & media</span>
+    <span><i class="fas fa-microphone-alt"></i> amplify your voice</span>
+  </div>
+</div>
+
+<!-- MODAL for creating blog post -->
+<div id="blogModal" class="modal-overlay">
+  <div class="modal-content">
+    <h3><i class="fas fa-feather-alt"></i> New blog post</h3>
+    <input type="text" id="blogTitle" placeholder="Title...">
+    <textarea id="blogContent" rows="4" placeholder="Write your review, news or story..."></textarea>
+    <input type="text" id="blogImageUrl" placeholder="Image URL (optional)">
+    <div class="modal-actions">
+      <button class="modal-btn btn-secondary" id="closeModalBtn">Cancel</button>
+      <button class="modal-btn btn-primary" id="saveBlogBtn">Publish</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // -------------------- MOCK BLOGS DATA --------------------
+  let blogs = [
+    { id: "b1", title: "5 must-see indie concerts this summer", excerpt: "From Brooklyn to Portland, the energy is electric...", image: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=400&h=200&fit=crop", date: "May 01, 2025" },
+    { id: "b2", title: "Behind the scenes: Neon Pulse interview", excerpt: "We sat down with the electronic duo before their massive tour...", image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=200&fit=crop", date: "Apr 28, 2025" }
+  ];
+
+  // ---------- MEDIA STORAGE (local) ----------
+  let mediaFiles = []; // each obj: { id, type, url, name, timestamp }
+
+  // ---------- DOM Elements ----------
+  const eventsPanel = document.getElementById('eventsPanel');
+  const blogsPanel = document.getElementById('blogsPanel');
+  const uploadsPanel = document.getElementById('uploadsPanel');
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const blogModal = document.getElementById('blogModal');
+  const createBlogBtn = document.getElementById('createBlogBtn');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const saveBlogBtn = document.getElementById('saveBlogBtn');
+  const blogsContainer = document.getElementById('blogsContainer');
+  const mediaGallery = document.getElementById('mediaGallery');
+  const fileInput = document.getElementById('fileInput');
+  const selectFilesBtn = document.getElementById('selectFilesBtn');
+  const dropZone = document.getElementById('dropZone');
+
+  // ---------- UTILITIES ----------
+  function formatDate() { return new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); }
+
+  function renderBlogs() {
+    if (!blogsContainer) return;
+    if (blogs.length === 0) {
+      blogsContainer.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:60px;">✨ No articles yet. Click "Write article" to share insights.</div>`;
+      return;
+    }
+    blogsContainer.innerHTML = blogs.map(blog => `
+      <div class="blog-card">
+        <div class="blog-img" style="background-image: url('${blog.image || 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=400&h=200&fit=crop'}');"></div>
+        <div class="blog-content">
+          <div class="blog-title">${escapeHtml(blog.title)}</div>
+          <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> ${blog.date}</span> <span><i class="fas fa-tag"></i> music</span></div>
+          <div class="blog-excerpt">${escapeHtml(blog.excerpt)}</div>
+          <a href="#" class="read-more" data-id="${blog.id}">Read full <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    `).join('');
+    document.querySelectorAll('.read-more').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = link.getAttribute('data-id');
+        const post = blogs.find(b => b.id === id);
+        alert(`📖 FULL POST:\n${post.title}\n\n${post.excerpt} ... (full content demo) \n\n🔥 Stay tuned for more insights!`);
+      });
+    });
+  }
+
+  function escapeHtml(str) { return str.replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+
+  // save new blog
+  saveBlogBtn.addEventListener('click', () => {
+    const title = document.getElementById('blogTitle').value.trim();
+    const content = document.getElementById('blogContent').value.trim();
+    let imgUrl = document.getElementById('blogImageUrl').value.trim();
+    if (!title || !content) { alert("Please add title and content"); return; }
+    if (!imgUrl) imgUrl = "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=200&fit=crop";
+    const newBlog = {
+      id: Date.now().toString(),
+      title: title,
+      excerpt: content.substring(0, 120) + (content.length > 120 ? '...' : ''),
+      image: imgUrl,
+      date: formatDate()
+    };
+    blogs.unshift(newBlog);
+    renderBlogs();
+    blogModal.classList.remove('active');
+    document.getElementById('blogTitle').value = '';
+    document.getElementById('blogContent').value = '';
+    document.getElementById('blogImageUrl').value = '';
+  });
+
+  createBlogBtn.addEventListener('click', () => blogModal.classList.add('active'));
+  closeModalBtn.addEventListener('click', () => blogModal.classList.remove('active'));
+
+  // ---------- MEDIA UPLOAD LOGIC ----------
+  function addMediaFile(file) {
+    const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'video/mp4'];
+    if (!validTypes.includes(file.type)) { alert("Only images and MP4 videos"); return; }
+    if (file.size > 10 * 1024 * 1024) { alert("Max 10MB per file"); return; }
+    const url = URL.createObjectURL(file);
+    const newMedia = {
+      id: Date.now() + '-' + Math.random(),
+      type: file.type.startsWith('image') ? 'image' : 'video',
+      url: url,
+      name: file.name,
+      timestamp: new Date().toLocaleString()
+    };
+    mediaFiles.unshift(newMedia);
+    renderMediaGallery();
+  }
+
+  function renderMediaGallery() {
+    if (mediaFiles.length === 0) {
+      mediaGallery.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:40px; background:#0f172a60; border-radius:32px;"><i class="fas fa-camera"></i> No media yet. Upload your first photo or video.</div>`;
+      return;
+    }
+    mediaGallery.innerHTML = mediaFiles.map(media => `
+      <div class="media-item">
+        ${media.type === 'image' ? `<img src="${media.url}" alt="upload">` : `<video controls src="${media.url}"></video>`}
+        <div class="media-info"><span>${media.name.substring(0, 20)}</span><i class="fas fa-trash-alt" style="color:#e11d48; cursor:pointer;" data-id="${media.id}"></i></div>
+      </div>
+    `).join('');
+    document.querySelectorAll('.fa-trash-alt').forEach(trash => {
+      trash.addEventListener('click', (e) => {
+        const id = trash.getAttribute('data-id');
+        mediaFiles = mediaFiles.filter(m => m.id !== id);
+        renderMediaGallery();
+      });
+    });
+  }
+
+  selectFilesBtn.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', (e) => {
+    Array.from(e.target.files).forEach(file => addMediaFile(file));
+    fileInput.value = '';
+  });
+  dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.style.borderColor = '#e11d48'; });
+  dropZone.addEventListener('dragleave', () => dropZone.style.borderColor = 'rgba(225,29,72,0.4)');
+  dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.style.borderColor = 'rgba(225,29,72,0.4)';
+    Array.from(e.dataTransfer.files).forEach(file => addMediaFile(file));
+  });
+
+  // ---------- EVENTS SECTION (same as previous pro but adapted) ----------
+  const eventsData = [
+    { id: 1, artist: "Midnight Echoes", genre: "rock", city: "Austin, TX", venue: "Mohawk", date: "May 12, 2025", time: "8:00 PM", img: "https://images.unsplash.com/photo-1501612780327-45045538702b?w=600&h=400&fit=crop", rsvp: 124 },
+    { id: 2, artist: "Neon Pulse", genre: "electronic", city: "Chicago, IL", venue: "Smartbar", date: "May 18, 2025", time: "10:30 PM", img: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop", rsvp: 342 },
+    { id: 3, artist: "The Velvet Leaves", genre: "indie", city: "Brooklyn, NY", venue: "Music Hall", date: "May 25, 2025", time: "7:30 PM", img: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=600&h=400&fit=crop", rsvp: 89 },
+    { id: 4, artist: "Satin Blue", genre: "jazz", city: "New Orleans", venue: "Jazz Playhouse", date: "May 08, 2025", time: "9:00 PM", img: "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=600&h=400&fit=crop", rsvp: 57 },
+  ];
+  let currentFilter = "all", currentView = "grid", searchQuery = "";
+  const eventsContainer = document.getElementById("eventsContainer");
+  function getFilteredEvents() {
+    let filtered = eventsData;
+    if (currentFilter !== "all") filtered = filtered.filter(ev => ev.genre === currentFilter);
+    if (searchQuery.trim()) {
+      const lower = searchQuery.toLowerCase();
+      filtered = filtered.filter(ev => ev.artist.toLowerCase().includes(lower) || ev.city.toLowerCase().includes(lower));
+    }
+    return filtered;
+  }
+  function renderEvents() {
+    const events = getFilteredEvents();
+    if (events.length === 0) { eventsContainer.innerHTML = `<div class="empty-state" style="padding:60px;">No events match</div>`; return; }
+    eventsContainer.innerHTML = events.map(ev => `<div class="concert-card"><div class="card-img" style="background-image:url(${ev.img});"><div class="card-badge">🎫 ${ev.rsvp} RSVP</div></div><div class="card-content"><div class="artist-name">${ev.artist}<span class="genre-tag">${ev.genre}</span></div><div class="venue-info"><i class="fas fa-location-dot"></i> ${ev.venue}, ${ev.city}</div><div class="date-actions"><span class="date">${ev.date}</span><button class="rsvp-btn" data-id="${ev.id}">RSVP</button></div></div></div>`).join('');
+    document.querySelectorAll('.rsvp-btn').forEach(btn => btn.addEventListener('click', (e) => { e.stopPropagation(); alert("✨ VIP RSVP added!"); }));
+  }
+  document.querySelectorAll(".chip").forEach(chip => chip.addEventListener("click", function() { currentFilter = this.getAttribute("data-filter"); renderEvents(); }));
+  document.getElementById("globalSearchInput")?.addEventListener("input", (e) => { searchQuery = e.target.value; renderEvents(); });
+  
+  // TABS handling
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active-panel'));
+    document.getElementById(`${tabId}Panel`).classList.add('active-panel');
+    tabBtns.forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.tab-btn[data-tab="${tabId}"]`).classList.add('active');
+    if (tabId === 'blogs') renderBlogs();
+    if (tabId === 'uploads') renderMediaGallery();
+  }
+  tabBtns.forEach(btn => btn.addEventListener('click', () => switchTab(btn.getAttribute('data-tab'))));
+  renderEvents();
+  renderBlogs();
+  renderMediaGallery();
+</script>
+</body>
+</html>
