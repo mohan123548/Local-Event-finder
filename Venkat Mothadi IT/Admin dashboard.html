@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard · Local Event Finder</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="auth.css?v=1" />
+</head>
+
+<body class="admin-page" data-required-role="admin">
+  <main class="dashboard-page">
+    <div class="dashboard-shell">
+      <header class="dashboard-topbar">
+        <div class="dashboard-brand">
+          <img src="logo-mark.svg" alt="" />
+          <span>
+            <strong>Local Event Finder</strong>
+            <small>ADMIN CONTROL CENTER</small>
+          </span>
+        </div>
+
+        <button class="logout-button" data-logout type="button">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          Sign out
+        </button>
+      </header>
+
+      <section class="dashboard-hero">
+        <p>ADMINISTRATOR SESSION VERIFIED</p>
+        <h1>Welcome, <span data-user-name>Administrator</span>.</h1>
+        <span data-user-email></span>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="dashboard-card">
+          <i class="fa-solid fa-calendar-days"></i>
+          <h3>Manage events</h3>
+          <p>Create, edit, approve, or remove event listings from the platform.</p>
+          <a href="index.html">Open application →</a>
+        </article>
+
+        <article class="dashboard-card">
+          <i class="fa-solid fa-users-gear"></i>
+          <h3>Manage users</h3>
+          <p>Connect this panel to future user administration endpoints.</p>
+        </article>
+
+        <article class="dashboard-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Platform analytics</h3>
+          <p>Track events, categories, active cities, and engagement metrics.</p>
+        </article>
+      </section>
+
+
+<section class="audit-section">
+  <div class="audit-heading">
+    <div>
+      <p>DATABASE LOGIN RECORDS</p>
+      <h2>User Login History</h2>
+      <span>Successful and failed login attempts stored in SQLite.</span>
+    </div>
+    <button id="refreshAuditBtn" class="logout-button" type="button">
+      <i class="fa-solid fa-rotate"></i>
+      Refresh
+    </button>
+  </div>
+
+  <div class="audit-table-wrap">
+    <table class="audit-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Email</th>
+          <th>Portal</th>
+          <th>Status</th>
+          <th>IP Address</th>
+          <th>Reason</th>
+        </tr>
+      </thead>
+      <tbody id="auditTableBody">
+        <tr>
+          <td colspan="6">Loading login history...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+    </div>
+  </main>
+
+  <script src="dashboard.js?v=1"></script>
+</body>
+</html>
